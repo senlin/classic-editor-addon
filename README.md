@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on July 3, 2018
+###### Last updated on July 7, 2018
 ###### Development version 1.2.0
 ###### requires at least WordPress 4.9.6
 ###### tested up to WordPress 4.9.6
