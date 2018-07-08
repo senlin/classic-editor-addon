@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:	Classic Editor Addon
- * Description:	The Classic Editor plugin doesn't remove Gutenberg by default. This addon changes that and makes some more changes. See readme.txt for more details.
+ * Plugin Name:			Classic Editor Addon
+ * Description:			The Classic Editor plugin doesn't remove Gutenberg by default. This addon changes that and makes some more changes. See readme.txt for more details.
 
- * Author:		<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:		1.2
+ * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
+ * Version:				1.3.0
 
- * Requires at least:	4.9.6
- * Tested up to:		4.9.6
+ * Requires at least:	4.9
+ * Tested up to:		4.9.7
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt
@@ -18,7 +18,7 @@
  * GitHub Branch:		master
 
  * @package WordPress
- * @author SO WP &amp; GSchoppe
+ * @author Pieter Bos &amp; GSchoppe
  * @since 1.0.0
  */
 
