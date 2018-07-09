@@ -26,8 +26,7 @@ We support this plugin exclusively through [Github](https://github.com/senlin/cl
 
 Thanks for your understanding and cooperation.
 
-If you like the Classic Editor Addon plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). You can also help a great deal by [translating the plugin](https://translate.wordpress.org/projects/wp-plugins/classic-editor-addon) into your own language.
-Thanks!
+If you like the Classic Editor Addon plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). Thanks!
 
 Classic Editor Addon by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
 
