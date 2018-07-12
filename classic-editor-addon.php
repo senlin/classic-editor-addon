@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:			Classic Editor Addon
- * Description:			The Classic Editor plugin doesn't remove Gutenberg by default. This addon changes that and makes some more changes. See readme.txt for more details.
+ * Description:			This free "Classic Editor Addon" plugin changes the default behaviour of the "Classic Editor" plugin; and then some. See readme.txt for more details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
  * Version:				1.3.0
