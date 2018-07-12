@@ -8,21 +8,21 @@
 ###### tested up to WordPress 4.9.7
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
-The Classic Editor plugin doesn't remove Gutenberg by default. This free addon changes that and then some.
+This free "Classic Editor Addon" plugin changes the default behaviour of the "Classic Editor" plugin; and then some.
 
 ## Description
 
 > GDPR-compliant: does not collect any user data
 
-The Classic Editor plugin doesn't remove Gutenberg by default. With this free addon we set the option that controls this from no-replace to replace, so no additional action is needed anymore. This is what the Classic Editor should have done out of the box, what else is the point of using the plugin in the first place?
+The "Classic Editor" plugin doesn't remove Gutenberg by default. With this free addon we set the option that controls this from no-replace to replace, so no additional action is needed anymore. This is what the Classic Editor should have done out of the box.
 
-In addition to this most basic requirement, the Classic Editor Addon removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
+In addition to this most basic requirement, the "Classic Editor Addon" removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen. Also the drop down buttons Gutenberg adds to the post type screens is replaced with the regular "Add New" button.
 
 Last but not least the Classic Editor Addon suppresses the Nag screen that is slated to arrive in the Dashboard with WP version 4.9.8.
 
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for Gutenberg and/or who does not want to bother clients with Gutenberg. Install it now on sites and by the time WP 4.9.8 and eventually 5.0 are released, the UX remains the same as you are used to!
 
-We support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
+We support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue here. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
 Thanks for your understanding and cooperation.
 
@@ -38,7 +38,11 @@ Gutenberg is a new editing experience that will drop with WordPress 5.0, whether
 
 ### Why this addon? Isn't the purpose of the Classic Editor plugin to disable Gutenberg?
 
-The Classic Editor plugin has been made available by "WordPress Contributors" supposedly to replace the Gutenberg editor and to restore the Edit Post template, but it does so only with an additional manual setting. To automate this we have released this free addon plugin.
+The "Classic Editor" plugin, by Andrew Ozz, doesn't completely disable Gutenberg without changing settings. "Classic Editor Addon" is a second plugin that fixes both of these behaviors in "Classic Editor". If you install both plugins, Gutenberg will be completely disabled, and you will not see a nag screen.
+
+### How does this compare to other plugins that disable Gutenberg?
+
+Great question! Classic editor is the official plugin for removing Gutenberg, and the install count is apparently being used as a metric to gauge success of the Gutenberg project. So, although other plugins exist to force-disable Gutenberg, using them doesn't properly notify the WP Core team of the number of issues users are having, that is why "Classic Editor Addon" doesn't disable Gutenberg itself, it just properly sets the options for "Classic Editor" and disables the Gutenberg Nag notice, making it easier to mass-install classic editor.
 
 ### The plugin doesn't do anything!
 
