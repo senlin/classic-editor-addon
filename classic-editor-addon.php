@@ -48,6 +48,11 @@ function classic_editor_addon_post_init() {
 	 */
 	remove_action( 'try_gutenberg_panel', 'wp_try_gutenberg_panel' );
 
+	/**
+	 * Remove the "Add New" Dropdown from post type screens; fixes [issue #2](https://github.com/senlin/classic-editor-addon/issues/2)
+	 */
+	remove_action( 'admin_print_scripts-edit.php', 'gutenberg_replace_default_add_new_button' );
+
 	if ( function_exists( 'classic_editor_init_actions' ) ) {
 		/**
 		 * Remove Settings link to the settings from the Plugins screen (L277).
