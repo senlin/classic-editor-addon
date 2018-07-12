@@ -22,13 +22,13 @@
  * @since 1.0.0
  */
 
-
 // don't load the plugin file directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_action( 'plugins_loaded', 'classic_editor_addon_pre_init', 1, 0 );
 
 function classic_editor_addon_pre_init() {
+
 	if ( function_exists( 'classic_editor_init_actions' ) ) {
 		/**
 		 * Change the default option of "no-replace" to "replace",
@@ -43,6 +43,7 @@ function classic_editor_addon_pre_init() {
 add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
 
 function classic_editor_addon_post_init() {
+
 	/**
 	 * Remove the Try Gutenberg Panel, slated for WordPress 4.9.8
 	 */
