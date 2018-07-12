@@ -4,7 +4,7 @@ Tags: gutenberg, classic editor, addon
 Requires at least: 4.9
 Requires PHP: 5.2
 Tested up to: 4.9.7
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -53,6 +53,12 @@ Is Gutenberg active on the site and do you have the Classic Editor plugin instal
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 1.4.0 =
+
+* July 12, 2018
+* fix [issue #2](https://github.com/senlin/classic-editor-addon/issues/2)
+* adjust readme text and FAQs
 
 = 1.3.0 =
 

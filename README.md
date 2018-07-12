@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on July 8, 2018
-###### Development version 1.3.0
+###### Last updated on July 12, 2018
+###### Development version 1.4.0
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 4.9.7
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
@@ -58,6 +58,12 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 1.4.0
+
+* July 12, 2018
+* fix [issue #2](https://github.com/senlin/classic-editor-addon/issues/2)
+* adjust readme text and FAQs
 
 ### 1.3.0
 
