@@ -67,3 +67,7 @@ function classic_editor_addon_post_init() {
 function classic_editor_addon_hardcode_replace( $value ) {
 	return 'replace';
 }
+
+// Load WP_Dependency_Installer
+include_once( __DIR__ . '/vendor/autoload.php' );
+WP_Dependency_Installer::instance()->run( __DIR__ );
