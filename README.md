@@ -2,8 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on July 12, 2018
-###### Development version 1.4.0
+###### Last updated on July 13, 2018
+###### Development version 2.0.0
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 4.9.7
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
@@ -17,6 +17,8 @@ This free "Classic Editor Addon" plugin changes the default behaviour of the "Cl
 The "Classic Editor" plugin doesn't remove Gutenberg by default. With this free addon we set the option that controls this from no-replace to replace, so no additional action is needed anymore. This is what the Classic Editor should have done out of the box.
 
 In addition to this most basic requirement, the "Classic Editor Addon" removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen. Also the drop down buttons Gutenberg adds to the post type screens is replaced with the regular "Add New" button.
+
+**Update:** With version 2.0.0 we have added a class that detects whether the main "Classic Editor" plugin already has been installed and activated. If it hasn't, that plugin can be installed with one click. The notice can also be dismissed.
 
 Last but not least the Classic Editor Addon suppresses the Nag screen that is slated to arrive in the Dashboard with WP version 4.9.8.
 
@@ -58,6 +60,12 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.0.0
+
+* 
+* add WP Dependency Installer to facilitate with installing and activating Classic Editor plugin
+* adjust min PHP version due to addition of WP Dependency Installer
 
 ### 1.4.0
 
