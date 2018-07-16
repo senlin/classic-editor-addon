@@ -4,7 +4,7 @@ Tags: gutenberg, classic editor, addon
 Requires at least: 4.9
 Requires PHP: 5.3
 Tested up to: 4.9.7
-Stable tag: 1.4.0
+Stable tag: 2.0.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -58,9 +58,9 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 
 = 2.0.0 =
 
-*
-* add WP Dependency Installer to facilitate with installing and activating Classic Editor plugin
-* adjust min PHP version due to addition of WP Dependency Installer
+* July 16, 2018
+* add WP Dependency Installer to facilitate with installing and activating Classic Editor plugin (changed color of admin notice to blue)
+* adjust minimum PHP version (to 5.3) due to addition of WP Dependency Installer
 
 = 1.4.0 =
 
@@ -87,3 +87,9 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 
 * February 3, 2018
 * Released as [code snippet](https://gist.github.com/senlin/691c5f06459857f57247dc92f7ec1406/6f4091caf458fbec70b33df5d136d66e8e3b6b29)
+
+== Upgrade Notice ==
+
+= 2.0.0 =
+
+* now the plugin requires PHP 5.3 due to addition of WP Dependency Installer

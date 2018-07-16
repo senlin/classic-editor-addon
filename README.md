@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on July 13, 2018
+###### Last updated on July 16, 2018
 ###### Development version 2.0.0
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 4.9.7
@@ -63,9 +63,9 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 
 ### 2.0.0
 
-* 
-* add WP Dependency Installer to facilitate with installing and activating Classic Editor plugin
-* adjust min PHP version due to addition of WP Dependency Installer
+* July 16, 2018
+* add WP Dependency Installer to facilitate with installing and activating Classic Editor plugin (changed color of admin notice to blue)
+* adjust minimum PHP version (to 5.3) due to addition of WP Dependency Installer
 
 ### 1.4.0
 
@@ -93,3 +93,8 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * February 3, 2018
 * Released as [code snippet](https://gist.github.com/senlin/691c5f06459857f57247dc92f7ec1406/6f4091caf458fbec70b33df5d136d66e8e3b6b29)
 
+## Upgrade Notice
+
+### 2.0.0
+
+* now the plugin requires PHP 5.3 due to addition of WP Dependency Installer

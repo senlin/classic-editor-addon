@@ -377,7 +377,7 @@ if ( ! class_exists( 'WP_Dependency_Installer' ) ) {
 			}
 			$message = null;
 			foreach ( $this->notices as $notice ) {
-				$status = empty( $notice['status'] ) ? 'updated' : $notice['status'];
+				$status = empty( $notice['status'] ) ? 'notice-info' : $notice['status'];
 
 				if ( ! empty( $notice['action'] ) ) {
 					$action   = esc_attr( $notice['action'] );
