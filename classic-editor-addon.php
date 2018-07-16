@@ -25,8 +25,12 @@
 // don't load the plugin file directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-add_action( 'plugins_loaded', 'classic_editor_addon_pre_init', 1, 0 );
+// Load WP_Dependency_Installer
+include_once( __DIR__ . '/vendor/autoload.php' );
+WP_Dependency_Installer::instance()->run( __DIR__ );
 
+// Hardcode the replace option into Classic Editor, bypassng their settings
+add_action( 'plugins_loaded', 'classic_editor_addon_pre_init', 1, 0 );
 function classic_editor_addon_pre_init() {
 
 	if ( function_exists( 'classic_editor_init_actions' ) ) {
@@ -40,8 +44,11 @@ function classic_editor_addon_pre_init() {
 
 }
 
-add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
+function classic_editor_addon_hardcode_replace( $value ) {
+	return 'replace';
+}
 
+add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
 function classic_editor_addon_post_init() {
 
 	/**
@@ -63,11 +70,3 @@ function classic_editor_addon_post_init() {
 	}
 
 }
-
-function classic_editor_addon_hardcode_replace( $value ) {
-	return 'replace';
-}
-
-// Load WP_Dependency_Installer
-include_once( __DIR__ . '/vendor/autoload.php' );
-WP_Dependency_Installer::instance()->run( __DIR__ );
