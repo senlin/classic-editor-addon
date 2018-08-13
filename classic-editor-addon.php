@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 include_once( __DIR__ . '/vendor/autoload.php' );
 WP_Dependency_Installer::instance()->run( __DIR__ );
 
-// Hardcode the replace option into Classic Editor, bypassng their settings
+// Hardcode the replace option into Classic Editor, bypassing their settings
 add_action( 'plugins_loaded', 'classic_editor_addon_pre_init', 1, 0 );
 function classic_editor_addon_pre_init() {
 
