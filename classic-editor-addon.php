@@ -53,13 +53,17 @@ function classic_editor_addon_post_init() {
 
 	/**
 	 * Remove the Try Gutenberg Panel, slated for WordPress 4.9.8
+	 *
+	 * after latests update of Classic Editor plugin (0.4) this has become redundant
 	 */
-	remove_action( 'try_gutenberg_panel', 'wp_try_gutenberg_panel' );
+	//remove_action( 'try_gutenberg_panel', 'wp_try_gutenberg_panel' );
 
 	/**
 	 * Remove the "Add New" Dropdown from post type screens; fixes [issue #2](https://github.com/senlin/classic-editor-addon/issues/2)
+	 *
+	 * after latests update of Classic Editor plugin (0.4) this has become redundant
 	 */
-	remove_action( 'admin_print_scripts-edit.php', 'gutenberg_replace_default_add_new_button' );
+	//remove_action( 'admin_print_scripts-edit.php', 'gutenberg_replace_default_add_new_button' );
 
 	if ( function_exists( 'classic_editor_init_actions' ) ) {
 		/**

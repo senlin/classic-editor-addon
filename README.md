@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on July 16, 2018
-###### Development version 2.0.0
+###### Last updated on August 13, 2018
+###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 4.9.7
+###### tested up to WordPress 4.9.8
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
 This free "Classic Editor Addon" plugin changes the default behaviour of the "Classic Editor" plugin; and then some.
@@ -60,6 +60,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 
+
+* 
+* remove functions that have become redundant with version 0.4 of the Classic Editor plugin
 
 ### 2.0.0
 
