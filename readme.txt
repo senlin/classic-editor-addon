@@ -3,26 +3,26 @@ Contributors: senlin, gschoppe
 Tags: gutenberg, classic editor, addon
 Requires at least: 4.9
 Requires PHP: 5.3
-Tested up to: 4.9.7
-Stable tag: 2.0.0
+Tested up to: 4.9.8
+Stable tag: 2.1.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-This free "Classic Editor Addon" plugin changes the default behaviour of the "Classic Editor" plugin; and then some.
+This free "Classic Editor Addon" plugin makes sure that Gutenberg cannot be accidentally activated even while the "Classic Editor" plugin is active.
 
 == Description ==
 
 > GDPR-compliant: does not collect any user data
 
-The "Classic Editor" plugin doesn't remove Gutenberg by default. With this free addon we set the option that controls this from no-replace to replace, so no additional action is needed anymore. This is what the Classic Editor should have done out of the box.
+The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for Gutenberg and/or who does not want to bother clients with Gutenberg. Install it now on sites and by the time WP 5.0 is released, the UX remains the same as you are used to!
 
-In addition to this most basic requirement, the "Classic Editor Addon" removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen. Also the drop down buttons Gutenberg adds to the post type screens is replaced with the regular "Add New" button.
+The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
-**Update:** With version 2.0.0 we have added a class that detects whether the main "Classic Editor" plugin already has been installed and activated. If it hasn't, that plugin can be installed with one click. The notice can also be dismissed.
+Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default setting to actually using the Classic Editor. It still contains a Settings page though and if the purpose of people is to get the Classic Editor instead of using Gutenberg, then we don't see the need for such a Settings page.
 
-Last but not least the Classic Editor Addon suppresses the Nag screen that is slated to arrive in the Dashboard with WP version 4.9.8.
+Also, if we look at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as Gutenberg adds a lot of undesirable comments, tags and what not to the content.
 
-The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for Gutenberg and/or who does not want to bother clients with Gutenberg. Install it now on sites and by the time WP 4.9.8 and eventually 5.0 are released, the UX remains the same as you are used to!
+Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will auto-install the "Classic Editor" plugin. It  removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
 
 We support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -40,11 +40,11 @@ Gutenberg is a new editing experience that will drop with WordPress 5.0, whether
 
 = Why this addon? Isn't the purpose of the Classic Editor plugin to disable Gutenberg? =
 
-The "Classic Editor" plugin, by Andrew Ozz, doesn't completely disable Gutenberg without changing settings. "Classic Editor Addon" is a second plugin that fixes both of these behaviors in "Classic Editor". If you install both plugins, Gutenberg will be completely disabled, and you will not see a nag screen.
+When it was released initially, the "Classic Editor" plugin, by Andrew Ozz, didn't completely disable Gutenberg without changing settings. Since version 0.0.4 it does, but it still comes with Settings. The "Classic Editor Addon" is a second plugin that makes sure the Settings are gone, so they cannot be accidentally triggered and "bring down the skies".
 
 = How does this compare to other plugins that disable Gutenberg? =
 
-Great question! "Classic Editor" is the official plugin for removing Gutenberg, and the install count is apparently being used as a metric to gauge success of the Gutenberg project. So, although other plugins exist to force-disable Gutenberg, using them doesn't properly notify the WP Core team of the number of issues users are having, that is why "Classic Editor Addon" doesn't disable Gutenberg itself, it just properly sets the options for "Classic Editor" and disables the Gutenberg Nag notice, making it easier to mass-install classic editor.
+Great question! "Classic Editor" is the official plugin for removing Gutenberg, and the install count is apparently being used as a metric to gauge success of the Gutenberg project. So, although other plugins exist to force-disable Gutenberg, using them doesn't properly notify the WP Core team of the number of issues users are having, that is why "Classic Editor Addon" doesn't disable Gutenberg itself, it just removes the Settings page of the "Classic Editor" plugin, making it easier to mass-install classic editor.
 
 = The plugin doesn't do anything! =
 
@@ -55,6 +55,12 @@ Is Gutenberg active on the site and do you have the Classic Editor plugin instal
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 2.1.0 =
+
+* August 28, 2018
+* remove functions that have become redundant since 0.0.4 release of Classic Editor plugin
+* rewrite readme files
 
 = 2.0.0 =
 

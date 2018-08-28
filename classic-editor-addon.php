@@ -4,10 +4,10 @@
  * Description:			This free "Classic Editor Addon" plugin changes the default behaviour of the "Classic Editor" plugin; and then some. See readme.txt for more details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				2.0.0
+ * Version:				2.1.0
 
  * Requires at least:	4.9
- * Tested up to:		4.9.7
+ * Tested up to:		4.9.8
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt
@@ -29,41 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 include_once( __DIR__ . '/vendor/autoload.php' );
 WP_Dependency_Installer::instance()->run( __DIR__ );
 
-// Hardcode the replace option into Classic Editor, bypassing their settings
-add_action( 'plugins_loaded', 'classic_editor_addon_pre_init', 1, 0 );
-function classic_editor_addon_pre_init() {
-
-	if ( function_exists( 'classic_editor_init_actions' ) ) {
-		/**
-		 * Change the default option of "no-replace" to "replace",
-		 * which means the checkbox will be unticked and the plugin
-		 * does what it says from the get-go (L336).
-		 */
-		add_filter( 'pre_option_classic-editor-replace', 'classic_editor_addon_hardcode_replace' );
-	}
-
-}
-
-function classic_editor_addon_hardcode_replace( $value ) {
-	return 'replace';
-}
-
 add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
 function classic_editor_addon_post_init() {
-
-	/**
-	 * Remove the Try Gutenberg Panel, slated for WordPress 4.9.8
-	 *
-	 * after latests update of Classic Editor plugin (0.4) this has become redundant
-	 */
-	//remove_action( 'try_gutenberg_panel', 'wp_try_gutenberg_panel' );
-
-	/**
-	 * Remove the "Add New" Dropdown from post type screens; fixes [issue #2](https://github.com/senlin/classic-editor-addon/issues/2)
-	 *
-	 * after latests update of Classic Editor plugin (0.4) this has become redundant
-	 */
-	//remove_action( 'admin_print_scripts-edit.php', 'gutenberg_replace_default_add_new_button' );
 
 	if ( function_exists( 'classic_editor_init_actions' ) ) {
 		/**
