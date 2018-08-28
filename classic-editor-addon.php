@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:			Classic Editor Addon
- * Description:			This free "Classic Editor Addon" plugin changes the default behaviour of the "Classic Editor" plugin; and then some. See readme.txt for more details.
+ * Description:			This free "Classic Editor Addon" plugin makes sure that Gutenberg cannot be accidentally activated even while the "Classic Editor" plugin is active. See readme.txt for more details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
  * Version:				2.1.0
