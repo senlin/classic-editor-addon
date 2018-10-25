@@ -5,7 +5,7 @@
 ###### Last updated on August 28, 2018
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 4.9.8
+###### tested up to WordPress 5.0
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
 This free "Classic Editor Addon" plugin makes sure that Gutenberg cannot be accidentally activated even while the "Classic Editor" plugin is active.
@@ -22,7 +22,7 @@ Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default s
 
 Also, if we look at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as Gutenberg adds a lot of undesirable comments, tags and what not to the content.
 
-Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will auto-install the "Classic Editor" plugin. It  removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
+Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will automatically download the “Classic Editor” plugin to enable easy install. It  removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
 
 We support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue here. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -60,6 +60,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.1.1
+
+* October 25, 2018
+* fix typo which addresses [issue #3](https://github.com/senlin/classic-editor-addon/issues/3)
 
 ### 2.1.0
 

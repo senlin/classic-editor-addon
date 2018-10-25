@@ -4,10 +4,10 @@
  * Description:			This free "Classic Editor Addon" plugin makes sure that Gutenberg cannot be accidentally activated even while the "Classic Editor" plugin is active. See readme.txt for more details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				2.1.0
+ * Version:				2.1.1
 
  * Requires at least:	4.9
- * Tested up to:		4.9.8
+ * Tested up to:		5.0
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt

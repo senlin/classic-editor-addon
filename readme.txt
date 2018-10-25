@@ -3,8 +3,8 @@ Contributors: senlin, gschoppe
 Tags: gutenberg, classic editor, addon
 Requires at least: 4.9
 Requires PHP: 5.3
-Tested up to: 4.9.8
-Stable tag: 2.1.0
+Tested up to: 5.0
+Stable tag: 2.1.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -22,7 +22,7 @@ Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default s
 
 Also, if we look at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as Gutenberg adds a lot of undesirable comments, tags and what not to the content.
 
-Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will auto-install the "Classic Editor" plugin. It  removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
+Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will automatically download the “Classic Editor” plugin to enable easy install. It removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
 
 We support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -55,6 +55,11 @@ Is Gutenberg active on the site and do you have the Classic Editor plugin instal
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 2.1.1 =
+
+* October 25, 2018
+* fix typo which addresses [issue #3](https://github.com/senlin/classic-editor-addon/issues/3)
 
 = 2.1.0 =
 
