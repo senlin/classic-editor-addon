@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:			Classic Editor Addon
- * Description:			This free "Classic Editor Addon" plugin makes sure that Gutenberg cannot be accidentally activated even while the "Classic Editor" plugin is active. See readme.txt for more details.
+ * Description:			This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated even while the "Classic Editor" plugin is active. See readme.txt for more details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				2.1.1
+ * Version:				2.2.0
 
  * Requires at least:	4.9
  * Tested up to:		5.0
@@ -30,14 +30,15 @@ include_once( __DIR__ . '/vendor/autoload.php' );
 WP_Dependency_Installer::instance()->run( __DIR__ );
 
 add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
+
 function classic_editor_addon_post_init() {
 
-	if ( function_exists( 'classic_editor_init_actions' ) ) {
+	if ( class_exists( 'Classic_Editor' ) ) {
 		/**
-		 * Remove Settings link to the settings from the Plugins screen (L277).
+		 * Remove Settings link to the settings from the Plugins screen.
 		 */
-		remove_filter( 'plugin_action_links', 'classic_editor_add_settings_link' );
-		remove_action( 'admin_init', 'classic_editor_admin_init' );
+		remove_filter( 'plugin_action_links', array( 'Classic_Editor', 'add_settings_link' ) );
+		remove_action( 'admin_init', array( 'Classic_Editor', 'register_settings' ) );
 	}
 
 }
