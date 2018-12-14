@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on December 12, 2018
+###### Last updated on December 14, 2018
 ###### Development version
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 5.0
@@ -60,6 +60,12 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.3.0
+
+* December 14, 2018
+* version update WP Dependency Installer
+* add parameter `"optional": false` as a workaround to fix [issue #4](https://github.com/senlin/classic-editor-addon/issues/4)
 
 ### 2.2.0
 

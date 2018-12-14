@@ -3,16 +3,16 @@
 * Tags: plugin, dependency, install
 * Requires at least: 3.8
 * Requires PHP: 5.3
-* Tested up to: 4.8
+* Tested up to: 5.0
 * Stable tag: master
-* Donate link: http://thefragens.com/wp-dependency-installer-donate
+* Donate link: <http://thefragens.com/wp-dependency-installer-donate>
 * License: MIT
 
 A lightweight class to add to WordPress plugins or themes to automatically install required plugin dependencies. Uses a JSON config file to declare plugin dependencies.
 
 ## Description
 
-This is a drop in class for developers to optionally or automatically install plugin dependencies for their own plugins or themes. It can install a plugin from w.org, GitHub, Bitbucket, or GitLab. You must include a JSON config file in the same directory as this class file.
+This is a drop in class for developers to optionally or automatically install plugin dependencies for their own plugins or themes. It can install a plugin from w.org, GitHub, Bitbucket, GitLab, Gitea, or a direct URL. You must include a JSON config file in the root directory of the plugin/theme file.
 
 This contains an example plugin and an example JSON configuration file. Only required dependencies are installed automatically, optional dependencies are not. Required dependencies are always kept active.
 
@@ -46,7 +46,6 @@ This file must be named `wp-dependencies.json` and it must be in the root direct
     "host": "wordpress",
     "slug": "query-monitor/query-monitor.php",
     "uri": "https://wordpress.org/plugins/query-monitor/",
-    "branch": "trunk",
     "optional": false
   },
   {
@@ -60,6 +59,7 @@ This file must be named `wp-dependencies.json` and it must be in the root direct
   },
   {
     "name": "Test Plugin Notags",
+    "host": "bitbucket",
     "slug": "test-plugin-notags/test-plugin-notags.php",
     "uri": "https://bitbucket.org/afragen/test-plugin-notags",
     "branch": "master",
@@ -74,17 +74,37 @@ This file must be named `wp-dependencies.json` and it must be in the root direct
     "branch": "develop",
     "optional": true,
     "token": null
+  },
+  {
+    "name": "Test Direct Plugin Download",
+    "host": "direct",
+    "slug": "test-direct-plugin/test-plugin.php",
+    "uri": "https://direct-download.com/path/to.zip",
+    "optional": true
   }
 ]
 ```
 
-An example file is included, `wp-dependencies-example.json`. You may use a shorthand uri such as `<owner>/<repo>` but only if you include the `host` element in the JSON. If you have a full URI in the `uri` element then the `host` element is optional.
+An example file is included, `wp-dependencies-example.json`. You may use a shorthand uri such as `<owner>/<repo>` in the JSON.
 
-If you want to programmatically add dependencies you can send an associative array directly to 
+If you want to programmatically add dependencies you can send an associative array directly to
+
 ```php
 WP_Dependency_Installer::instance()->register( $config )
 ```
+
 where `$config` is an associative array as in identical format as `json_decode( wp-dependencies.json content )`
+
+The default timeout for dismissal of a notification is 7 days. There is a filter `wp_dependency_timeout` to adjust this on a per project basis.
+
+```php
+add_filter(
+  'wp_dependency_timeout', function( $timeout, $source ) {
+    $timeout = $source !== basename( __DIR__ ) ? $timeout : 14;
+    return $timeout;
+  }, 10, 2
+);
+```
 
 ## Development
 

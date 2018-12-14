@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'WPDI_Plugin_Installer_Skin' => $vendorDir . '/afragen/wp-dependency-installer/wp-dependency-installer.php',
+    'WP_Dependency_Installer' => $vendorDir . '/afragen/wp-dependency-installer/wp-dependency-installer.php',
 );

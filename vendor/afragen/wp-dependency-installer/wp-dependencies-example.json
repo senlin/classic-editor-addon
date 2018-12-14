@@ -4,7 +4,6 @@
     "host": "wordpress",
     "slug": "query-monitor/query-monitor.php",
     "uri": "https://wordpress.org/plugins/query-monitor/",
-    "branch": "trunk",
     "optional": false
   },
   {
@@ -18,11 +17,11 @@
   },
   {
     "name": "Test Plugin Notags",
+    "host": "bitbucket",
     "slug": "test-plugin-notags/test-plugin-notags.php",
     "uri": "https://bitbucket.org/afragen/test-plugin-notags",
     "branch": "master",
-    "optional": true,
-    "token": null
+    "optional": true
   },
   {
     "name": "Test Gitlab Plugin2",
@@ -32,5 +31,12 @@
     "branch": "develop",
     "optional": true,
     "token": null
+  },
+  {
+    "name": "Test Direct Plugin Download",
+    "host": "direct",
+    "slug": "test-direct-plugin/test-plugin.php",
+    "uri": "https://direct-download.com/path/to.zip",
+    "optional": true
   }
 ]

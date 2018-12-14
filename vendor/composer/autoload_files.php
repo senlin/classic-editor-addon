@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'f51bb131284ceb3bf7d980d1de33e647' => $vendorDir . '/collizo4sky/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php',
-    '35bd6a751b552e7a94ae27bc4c52b33a' => $vendorDir . '/afragen/wp-dependency-installer/wp-dependency-installer.php',
 );

@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:			Classic Editor Addon
- * Description:			This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated even while the "Classic Editor" plugin is active. See readme.txt for more details.
+ * Description:			This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated. See README for details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				2.2.0
+ * Version:				2.3.0
 
  * Requires at least:	4.9
  * Tested up to:		5.0

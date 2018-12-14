@@ -4,6 +4,7 @@
     "host": "wordpress",
     "slug": "classic-editor/classic-editor.php",
     "uri": "https://wordpress.org/plugins/classic-editor/",
-    "branch": "trunk"
+    "branch": "trunk",
+    "optional": false
   }
 ]

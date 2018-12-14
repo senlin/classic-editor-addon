@@ -1,5 +1,5 @@
 {
     "require": {
-        "afragen/wp-dependency-installer": "^1.3"
+        "afragen/wp-dependency-installer": "^1.4"
     }
 }
