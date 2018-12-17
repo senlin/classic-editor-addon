@@ -2,10 +2,11 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on December 14, 2018
+###### Last updated on December 17, 2018
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.0
+###### tested up to WordPress 5.0.1
+###### min. PHP version: 5.4
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
 This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated even while the "Classic Editor" plugin is active.
@@ -60,6 +61,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.3.1
+
+* December 17, 2018
+* increase minimum PHP version to 5.4 due to introduction new shorthand syntax of WP Dependency Installer update in 2.3.0
 
 ### 2.3.0
 

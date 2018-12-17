@@ -2,9 +2,9 @@
 Contributors: senlin, gschoppe
 Tags: gutenberg, block editor, classic editor, addon, wordpress 5.0
 Requires at least: 4.9
-Requires PHP: 5.3
-Tested up to: 5.0
-Stable tag: 2.3.0
+Requires PHP: 5.4
+Tested up to: 5.0.1
+Stable tag: 2.3.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -15,6 +15,8 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 > GDPR-compliant: does not collect any user data
 
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new editing experience that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
+
+Please pay attention that the minimum PHP version to use our plugin is <strong>5.4</strong>.
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
@@ -55,6 +57,11 @@ Has the site been updated to WordPress 5.0 and do you have the Classic Editor pl
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 2.3.1 =
+
+* December 17, 2018
+* increase minimum PHP version to 5.4 due to introduction new shorthand syntax of WP Dependency Installer update in 2.3.0
 
 = 2.3.0 =
 
