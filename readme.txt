@@ -3,8 +3,8 @@ Contributors: senlin, gschoppe
 Tags: gutenberg, block editor, classic editor, addon, wordpress 5.0
 Requires at least: 4.9
 Requires PHP: 5.4
-Tested up to: 5.0.1
-Stable tag: 2.3.1
+Tested up to: 5.0.3
+Stable tag: 2.4.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -15,6 +15,10 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 > GDPR-compliant: does not collect any user data
 
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new editing experience that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
+
+<strong>What's New:</strong>
+The new block editor adds 2 sets of styles to the `<head>` section of your site. But since you have the Classic Editor Addon installed, the calls to those styles are a complete waste. With version 2.4.0 your site will not call these stylesheets anymore. Win!
+Credit for this suggestion go to [Mitchell Miller](https://github.com/mitchelldmiller) who brought this to our attention. Thanks Mitchell!
 
 Please pay attention that the minimum PHP version to use our plugin is <strong>5.4</strong>.
 
@@ -57,6 +61,11 @@ Has the site been updated to WordPress 5.0 and do you have the Classic Editor pl
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 2.4.0 =
+
+* January 22, 2019
+* add function that removes the 2 block editor style calls from the `<head>` section of your site
 
 = 2.3.1 =
 
