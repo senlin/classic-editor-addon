@@ -17,9 +17,9 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new block editor that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
 
-**What's New:**
+**What's New:**<br>
 The new block editor adds 2 sets of styles to the `<head>` section of your site. But since you have the Classic Editor Addon installed, the calls to those styles are a complete waste. With version 2.4.0 your site will not call these stylesheets anymore. Win! 
-Credit for this suggestion go to [Mitchell Miller](https://github.com/mitchelldmiller) who brought this to our attention. Thanks Mitchell! 
+Credit for this suggestion go to [Mitchell Miller](https://github.com/mitchelldmiller) who [brought this to our attention](https://github.com/senlin/classic-editor-addon/issues/5). Thanks Mitchell! 
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
