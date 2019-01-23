@@ -69,7 +69,7 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 ### 2.4.0
 
 * January 22, 2019
-* add function that removes the 2 block editor style calls from the `<head>` section of your site
+* add function that removes the 2 block editor style calls from the `<head>` section of your site (suggestion #5)
 
 ### 2.3.1
 
