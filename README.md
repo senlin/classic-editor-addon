@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
 
-###### Last updated on January 22, 2019
+###### Last updated on October 11, 2019
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.0.3
+###### tested up to WordPress 5.2.3
 ###### min. PHP version: 5.4
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
@@ -18,8 +18,8 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new block editor that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
 
 **What's New:**<br>
-The new block editor adds 2 sets of styles to the `<head>` section of your site. But since you have the Classic Editor Addon installed, the calls to those styles are a complete waste. With version 2.4.0 your site will not call these stylesheets anymore. Win! 
-Credit for this suggestion go to [Mitchell Miller](https://github.com/mitchelldmiller) who [brought this to our attention](https://github.com/senlin/classic-editor-addon/issues/5). Thanks Mitchell! 
+<strong>What's New:</strong>
+Sites running WooCommerce get another style added to the `<head>` section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 we introduce a condition that checks for WooCommerce and if active it removes that call. Win!
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
@@ -65,6 +65,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.5.0
+
+* October 11, 2019
+* add function that removes the 1 block editor style call from the `<head>` section of your site when WooCommerce is running
 
 ### 2.4.0
 
