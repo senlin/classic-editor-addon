@@ -1,6 +1,6 @@
 # Classic Editor Addon
 
-[![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon)
+[![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
 ###### Last updated on October 11, 2019
 ###### Development version
