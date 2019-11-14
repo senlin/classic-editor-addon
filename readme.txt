@@ -4,7 +4,7 @@ Tags: gutenberg, block editor, classic editor, addon, wordpress 5.0, woocommerce
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.3
-Stable tag: 2.5.0
+Stable tag: 2.6.0
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
