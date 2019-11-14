@@ -1,11 +1,10 @@
 # WP Dependency Installer
 * Contributors: [Andy Fragen](https://github.com/afragen), [Matt Gibbs](https://github.com/mgibbs189), [contributors](https://github.com/afragen/wp-dependency-installer/graphs/contributors)
 * Tags: plugin, dependency, install
-* Requires at least: 3.8
-* Requires PHP: 5.3
-* Tested up to: 5.0
+* Requires at least: 5.1
+* Requires PHP: 5.6
 * Stable tag: master
-* Donate link: <http://thefragens.com/wp-dependency-installer-donate>
+* Donate link: <https://thefragens.com/wp-dependency-installer-donate>
 * License: MIT
 
 A lightweight class to add to WordPress plugins or themes to automatically install required plugin dependencies. Uses a JSON config file to declare plugin dependencies.
@@ -17,6 +16,8 @@ This is a drop in class for developers to optionally or automatically install pl
 This contains an example plugin and an example JSON configuration file. Only required dependencies are installed automatically, optional dependencies are not. Required dependencies are always kept active.
 
 ## Installation
+
+WP Dependency Installer v2.0.0 or greater now requires PHP 5.6 or greater and WordPress 5.1 or greater.
 
 Install the package via composer.
 
@@ -63,8 +64,7 @@ This file must be named `wp-dependencies.json` and it must be in the root direct
     "slug": "test-plugin-notags/test-plugin-notags.php",
     "uri": "https://bitbucket.org/afragen/test-plugin-notags",
     "branch": "master",
-    "optional": true,
-    "token": null
+    "optional": true
   },
   {
     "name": "Test Gitlab Plugin2",
@@ -105,6 +105,8 @@ add_filter(
   }, 10, 2
 );
 ```
+
+The download link can be filtered using the filter hook `wp_dependency_download_link`. The `$download_link` and the `$dependency` are passed as parameters.
 
 ## Development
 

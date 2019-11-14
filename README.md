@@ -2,11 +2,11 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on October 11, 2019
+###### Last updated on November 14, 2019
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.2.3
-###### min. PHP version: 5.4
+###### tested up to WordPress 5.3
+###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
 This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated even while the "Classic Editor" plugin is active.
@@ -19,13 +19,15 @@ The free Classic Editor Addon plugin is targeted at everyone who is not yet read
 
 **What's New:**<br>
 <strong>What's New:</strong>
-Sites running WooCommerce get another style added to the `<head>` section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 we introduce a condition that checks for WooCommerce and if active it removes that call. Win!
+Compatible with WP 5.3, fixes reported issues.
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
 Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default setting to actually using the Classic Editor. It still contains a Settings page though and if the purpose of people is to get the Classic Editor instead of using the new block editor, then we don't see the need for such a Settings page.
 
 Also, if we look at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as the new block editor adds a lot of undesirable comments, tags and what not to the content.
+
+Sites running WooCommerce get another style added to the `<head>` section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 we introduce a condition that checks for WooCommerce and if active it removes that call. Win!
 
 Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will automatically download the “Classic Editor” plugin to enable easy install. It removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
 
@@ -65,6 +67,13 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.6.0
+
+* November 14, 2019
+* update WP Dependency Installer to 2.0.0
+* increase minimum PHP version to 5.6 (requirement of WP Dependency Installer)
+* WP 5.3 compatible fixes [this issue](https://wordpress.org/support/topic/wordpress-v5-3-errors/)
 
 ### 2.5.0
 
