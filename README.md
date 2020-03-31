@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on March 5, 2020
+###### Last updated on March 31, 2020
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.3.2
+###### tested up to WordPress 5.4
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
@@ -27,7 +27,7 @@ Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default s
 
 Also, if we look at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as the new block editor adds a lot of undesirable comments, tags and what not to the content.
 
-Sites running WooCommerce get another style added to the `<head>` section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 we introduce a condition that checks for WooCommerce and if active it removes that call. Win!
+Sites running WooCommerce get another style added to the <code><head></code> section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 we introduce a condition that checks for WooCommerce and if active it removes that call. Win!
 
 Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will automatically download the “Classic Editor” plugin to enable easy install. It removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
 
@@ -83,12 +83,12 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 ### 2.5.0
 
 * October 11, 2019
-* add function that removes the 1 block editor style call from the `<head>` section of your site when WooCommerce is running
+* add function that removes the 1 block editor style call from the <code><head></code> section of your site when WooCommerce is running
 
 ### 2.4.0
 
 * January 22, 2019
-* add function that removes the 2 block editor style calls from the `<head>` section of your site ([suggestion #5](https://github.com/senlin/classic-editor-addon/issues/5))
+* add function that removes the 2 block editor style calls from the <code><head></code> section of your site ([suggestion #5](https://github.com/senlin/classic-editor-addon/issues/5))
 
 ### 2.3.1
 
@@ -99,7 +99,7 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 
 * December 14, 2018
 * version update WP Dependency Installer
-* add parameter `"optional": false` as a workaround to fix [issue #4](https://github.com/senlin/classic-editor-addon/issues/4)
+* add parameter <code>"optional": false</code> as a workaround to fix [issue #4](https://github.com/senlin/classic-editor-addon/issues/4)
 
 ### 2.2.0
 
