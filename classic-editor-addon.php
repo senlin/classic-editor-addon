@@ -57,6 +57,9 @@ function classic_editor_addon_remove_block_styles() {
 	if ( class_exists( 'woocommerce' ) ) {
 		wp_dequeue_style( 'wc-block-style' );
 		wp_deregister_style( 'wc-block-style' );
+		// @2.6.2 remove WooCommerce block scripts
+		wp_dequeue_script( 'jquery-blockui' );
+		wp_deregister_script( 'jquery-blockui' );
 	}
 
 }
