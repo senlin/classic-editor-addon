@@ -3,8 +3,8 @@ Contributors: senlin, gschoppe
 Tags: gutenberg, block editor, classic editor, addon, wordpress 5.0, woocommerce
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.4
-Stable tag: 2.6.1
+Tested up to: 5.5
+Stable tag: 2.6.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -17,7 +17,7 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new editing experience that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
 
 <strong>What's New:</strong>
-Update WP Dependency Installer
+Remove WooCommerce block-ui scripts (if plugin is active)
 
 Please pay attention that the minimum PHP version to use our plugin is <strong>5.6</strong>.
 
@@ -62,6 +62,13 @@ Has the site been updated to WordPress 5.0 and do you have the Classic Editor pl
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 2.6.2 =
+
+* August 1, 2020
+* remove WooCommerce block-ui scripts
+* update WP Dependency Installer
+* tested up to WP 5.5.0
 
 = 2.6.1 =
 
