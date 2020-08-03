@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on August 1, 2020
+###### Last updated on August 3, 2020
 ###### Development version
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 5.5
@@ -19,7 +19,7 @@ The free Classic Editor Addon plugin is targeted at everyone who is not yet read
 
 **What's New:**<br>
 <strong>What's New:</strong>
-Remove WooCommerce block-ui scripts
+Rollback removal of WooCommerce block-ui scripts as they seem not to be exclusive to block editor
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
@@ -67,6 +67,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 2.6.3
+
+* August 3, 2020
+* rollback removal of WooCommerce block-ui scripts as they seem not to be exclusive to block editor
 
 ### 2.6.2
 
