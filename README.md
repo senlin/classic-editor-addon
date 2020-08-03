@@ -19,7 +19,7 @@ The free Classic Editor Addon plugin is targeted at everyone who is not yet read
 
 **What's New:**<br>
 <strong>What's New:</strong>
-Rollback removal of WooCommerce block-ui scripts as they seem not to be exclusive to block editor
+Rollback removal of WooCommerce block-ui scripts
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
@@ -71,7 +71,7 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 ### 2.6.3
 
 * August 3, 2020
-* rollback removal of WooCommerce block-ui scripts as they seem not to be exclusive to block editor
+* rollback removal of WooCommerce block-ui scripts
 
 ### 2.6.2
 
