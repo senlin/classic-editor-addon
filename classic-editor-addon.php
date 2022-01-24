@@ -26,8 +26,8 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Load WP_Dependency_Installer
-include_once( __DIR__ . '/vendor/autoload.php' );
-WP_Dependency_Installer::instance()->run( __DIR__ );
+require_once __DIR__ . '/vendor/autoload.php';
+WP_Dependency_Installer::instance( __DIR__ )->run();
 
 add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
 
