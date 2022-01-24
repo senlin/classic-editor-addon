@@ -70,6 +70,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 ### 3.0.0
 
 * January 24, 2022
+* adjust link to plugin search page
+
+### 3.0.0
+
+* January 24, 2022
 * replaced dependency library with simple dependency check/notice, due to many issues with 2.6.4 security update
 
 ### 2.6.4

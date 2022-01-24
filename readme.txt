@@ -3,8 +3,8 @@ Contributors: senlin, gschoppe
 Tags: gutenberg, block editor, classic editor, addon, wordpress 5.0, woocommerce
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 5.7
-Stable tag: 3.0.0
+Tested up to: 5.9
+Stable tag: 3.0.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -62,6 +62,11 @@ Has the site been updated to WordPress 5.0 and do you have the Classic Editor pl
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 3.0.1 =
+
+* January 24, 2022
+* adjust link to plugin search page
 
 = 3.0.0 =
 

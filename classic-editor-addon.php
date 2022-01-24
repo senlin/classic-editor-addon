@@ -4,7 +4,7 @@
  * Description:			This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated and blocks the calls to additional styles from the <code>&lt;head&gt;</code> (frontend). See README for details.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				3.0.0
+ * Version:				3.0.1
 
  * Requires at least:	4.9
  * Tested up to:		5.9
@@ -41,7 +41,7 @@ function cea_depends_on_ce() {
 
 function cea_plugin_notice() {
 	
-	printf( '<div class="error"><p>' . esc_html( __( 'Classic Editor Addon plugin requires the <a href="%s">Classic Editor plugin</a> to be installed and active.', 'classic-editor-addon' ) ) . '</p></div>', admin_url( 'plugin-install.php?s=classic%20editor&tab=search&type=term', 'https' ) );
+	printf( '<div class="error"><p>' . __( 'Classic Editor Addon plugin requires the <a href="%s">Classic Editor plugin</a> to be installed and active.', 'classic-editor-addon' ) . '</p></div>', admin_url( 'plugin-install.php?s=classic%20editor&tab=search&type=term', 'https' ) );
 }
 
 add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
