@@ -6,34 +6,16 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit7bccf5ae526588cfb1b3cd6112f8e2a4
 {
-    public static $files = array (
-        'f51bb131284ceb3bf7d980d1de33e647' => __DIR__ . '/..' . '/collizo4sky/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php',
-    );
-
-    public static $prefixLengthsPsr4 = array (
-        'C' => 
-        array (
-            'Composer\\Installers\\' => 20,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Composer\\Installers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
-    );
-
     public static $classMap = array (
-        'WPDI_Plugin_Installer_Skin' => __DIR__ . '/..' . '/afragen/wp-dependency-installer/wp-dependency-installer.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'WP_Dependency_Installer' => __DIR__ . '/..' . '/afragen/wp-dependency-installer/wp-dependency-installer.php',
+        'WP_Dependency_Installer_Skin' => __DIR__ . '/..' . '/afragen/wp-dependency-installer/wp-dependency-installer-skin.php',
+        'WP_Dismiss_Notice' => __DIR__ . '/..' . '/afragen/wp-dismiss-notice/wp-dismiss-notice.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7bccf5ae526588cfb1b3cd6112f8e2a4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7bccf5ae526588cfb1b3cd6112f8e2a4::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit7bccf5ae526588cfb1b3cd6112f8e2a4::$classMap;
 
         }, null, ClassLoader::class);

@@ -1,5 +1,10 @@
 {
     "require": {
-        "afragen/wp-dependency-installer": "^1.4"
+        "afragen/wp-dependency-installer": "^4.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }
