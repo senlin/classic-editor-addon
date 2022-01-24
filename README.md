@@ -18,8 +18,7 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new block editor that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
 
 **What's New:**<br>
-<strong>What's New:</strong>
-Security update
+Replaced dependency library with simple dependency check/notice
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
@@ -67,6 +66,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 3.0.0
+
+* January 24, 2022
+* replaced dependency library with simple dependency check/notice, due to many issues with 2.6.4 security update
 
 ### 2.6.4
 
