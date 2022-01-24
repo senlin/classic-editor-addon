@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on January 24, 2022
+###### Last updated on March 6, 2021
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.9
+###### tested up to WordPress 5.7
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
@@ -19,7 +19,7 @@ The free Classic Editor Addon plugin is targeted at everyone who is not yet read
 
 **What's New:**<br>
 <strong>What's New:</strong>
-Security update
+Rollback removal of WooCommerce block-ui scripts
 
 The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
@@ -67,12 +67,6 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
-
-### 2.6.4
-
-* January 24, 2022
-* update WP Dependency Installer library
-* tested up to WP 5.9
 
 ### 2.6.3
 
