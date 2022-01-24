@@ -67,7 +67,7 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 
 ## Changelog
 
-### 3.0.0
+### 3.0.1
 
 * January 24, 2022
 * adjust link to plugin search page
