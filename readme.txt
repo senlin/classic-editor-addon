@@ -17,7 +17,7 @@ This free "Classic Editor Addon" plugin makes sure that the new block editor can
 The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new editing experience that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
 
 <strong>What's New:</strong>
-Rollback removal of WooCommerce block-ui scripts
+Security update
 
 Please pay attention that the minimum PHP version to use our plugin is <strong>5.6</strong>.
 

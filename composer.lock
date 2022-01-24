@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7debd7c4900c60de5ab1d8dd79eac51e",
+    "content-hash": "19cb96e809fab30e1cedf35b38e4f363",
     "packages": [
         {
             "name": "afragen/wp-dependency-installer",
@@ -12,23 +12,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/afragen/wp-dependency-installer.git",
-                "reference": "6572e3b8027dd1f0f5655eeea482ddef22d8ca7c"
+                "reference": "ea09e08c20e9071f5a0e61fae6c5b34a72e3e55f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afragen/wp-dependency-installer/zipball/6572e3b8027dd1f0f5655eeea482ddef22d8ca7c",
-                "reference": "6572e3b8027dd1f0f5655eeea482ddef22d8ca7c",
+                "url": "https://api.github.com/repos/afragen/wp-dependency-installer/zipball/ea09e08c20e9071f5a0e61fae6c5b34a72e3e55f",
+                "reference": "ea09e08c20e9071f5a0e61fae6c5b34a72e3e55f",
                 "shasum": ""
             },
             "require": {
-                "afragen/wp-dismiss-notice": "*",
-                "php": ">=5.6"
+                "collizo4sky/persist-admin-notices-dismissal": "^1",
+                "php": ">=5.3"
             },
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "wp-dependency-installer.php",
-                    "wp-dependency-installer-skin.php"
+                    "wp-dependency-installer.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -37,57 +36,85 @@
             ],
             "authors": [
                 {
+                    "name": "Matt Gibbs",
+                    "role": "Developer"
+                },
+                {
                     "name": "Andy Fragen",
                     "email": "andy@thefragens.com",
                     "homepage": "https://thefragens.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Matt Gibbs",
-                    "homepage": "https://facetwp.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Raruto",
-                    "homepage": "https://raruto.github.io",
                     "role": "Developer"
                 }
             ],
             "description": "Library that helps WordPress plugin dependency management.",
-            "support": {
-                "issues": "https://github.com/afragen/wp-dependency-installer/issues",
-                "source": "https://github.com/afragen/wp-dependency-installer"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/afragen",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-01-19T00:48:02+00:00"
+            "time": "2018-11-26T00:08:14+00:00"
         },
         {
-            "name": "afragen/wp-dismiss-notice",
-            "version": "0.2.3",
+            "name": "collizo4sky/persist-admin-notices-dismissal",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/afragen/wp-dismiss-notice.git",
-                "reference": "21949732f1ea21d81500bdda8f882ac7eb0f98af"
+                "url": "https://github.com/collizo4sky/persist-admin-notices-dismissal.git",
+                "reference": "b80673631d14f10af9747283d08434619232c003"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afragen/wp-dismiss-notice/zipball/21949732f1ea21d81500bdda8f882ac7eb0f98af",
-                "reference": "21949732f1ea21d81500bdda8f882ac7eb0f98af",
+                "url": "https://api.github.com/repos/collizo4sky/persist-admin-notices-dismissal/zipball/b80673631d14f10af9747283d08434619232c003",
+                "reference": "b80673631d14f10af9747283d08434619232c003",
                 "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "wp-dismiss-notice.php"
+                "files": [
+                    "persist-admin-notices-dismissal.php"
                 ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Collins Agbonghama",
+                    "email": "me@w3guy.com"
+                }
+            ],
+            "description": "Simple library to persist dismissal of admin notices across pages in WordPress dashboard.",
+            "time": "2018-01-23T03:14:06+00:00"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "049797d727261bf27f2690430d935067710049c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
+                "reference": "049797d727261bf27f2690430d935067710049c2",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "^4.8.36"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -95,18 +122,82 @@
             ],
             "authors": [
                 {
-                    "name": "Andy Fragen",
-                    "email": "andy@thefragens.com",
-                    "homepage": "https://thefragens.com",
-                    "role": "Developer"
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
                 }
             ],
-            "description": "Library for time dismissible WordPress admin notices.",
-            "support": {
-                "issues": "https://github.com/afragen/wp-dismiss-notice/issues",
-                "source": "https://github.com/afragen/wp-dismiss-notice"
-            },
-            "time": "2021-12-19T21:53:57+00:00"
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2017-12-29T09:13:20+00:00"
         }
     ],
     "packages-dev": [],
@@ -116,6 +207,5 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform-dev": []
 }
