@@ -14,7 +14,7 @@
 
  * Text Domain: 		classic-editor-addon
 
- * GitHub Plugin URI:	https://github.com/senlin/classic-editor-addon
+ * GitHub Plugin URI:	https://github.com/sitedata/classic-editor-addon
  * GitHub Branch:		master
 
  * @package WordPress
