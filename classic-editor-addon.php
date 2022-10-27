@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:			Classic Editor Addon
- * Description:			This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated and blocks the calls to additional styles from the <code>&lt;head&gt;</code> (frontend). See README for details.
+ * Description:			The "Classic Editor Addon" plugin removes enqueued scripts/styles and also brings back classic Widgets.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				3.0.1
+ * Version:				3.1.0
 
  * Requires at least:	4.9
- * Tested up to:		5.9
+ * Tested up to:		6.1
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt
@@ -54,6 +54,17 @@ function classic_editor_addon_post_init() {
 		 */
 		remove_filter( 'plugin_action_links', array( 'Classic_Editor', 'add_settings_link' ) );
 		remove_action( 'admin_init', array( 'Classic_Editor', 'register_settings' ) );
+		
+		/**
+		 * Bring back Classic Widgets
+		 *
+		 * @since 3.1.0
+		 * @src: https://plugins.svn.wordpress.org/classic-widgets/tags/0.3/classic-widgets.php
+		 */
+		// Disable the block editor from managing widgets in the Gutenberg plugin.
+		add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+		// Disable the block editor from managing widgets.
+		add_filter( 'use_widgets_block_editor', '__return_false' );
 	}
 
 }

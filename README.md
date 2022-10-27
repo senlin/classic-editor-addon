@@ -2,35 +2,37 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on January 24, 2022
+###### Last updated on October 27, 2022
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 5.9
+###### tested up to WordPress 6.1
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
-This free "Classic Editor Addon" plugin makes sure that the new block editor cannot be accidentally activated even while the "Classic Editor" plugin is active.
+The "Classic Editor Addon" plugin removes enqueued scripts/styles and also brings back classic Widgets.
 
 ## Description
 
 > GDPR-compliant: does not collect any user data
 
-The free Classic Editor Addon plugin is targeted at everyone who is not yet ready for the new block editor that has been introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
+The free Classic Editor Addon plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
 
 **What's New:**<br>
-Replaced dependency library with simple dependency check/notice
+Brings back Classic Widgets
 
-The reason we released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
+The reason I released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
-Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default setting to actually using the Classic Editor. It still contains a Settings page though and if the purpose of people is to get the Classic Editor instead of using the new block editor, then we don't see the need for such a Settings page.
+Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default setting to actually using the Classic Editor. It still contains a Settings page though and if the purpose of people is to get the Classic Editor instead of using the new block editor, then there is no need for such a Settings page.
 
-Also, if we look at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as the new block editor adds a lot of undesirable comments, tags and what not to the content.
+Also, looking at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as the new block editor adds a lot of undesirable html comments, tags and what not to the content.
 
-Sites running WooCommerce get another style added to the <code><head></code> section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 we introduce a condition that checks for WooCommerce and if active it removes that call. Win!
+Sites running WooCommerce get another style added to the <code><head></code> section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 I introduced a condition that checks for WooCommerce and if active it removes that call. Win!
 
-Therefore we highly recommend installing this "Classic Editor Addon" plugin, which will automatically download the “Classic Editor” plugin to enable easy install. It removes the Settings link from the main Plugins page and removes the plugin's Settings from the Settings > Writing screen.
+And with version 3.1.0 Classic Widgets are also back. 
 
-We support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue here. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
+Therefore I highly recommend installing this "Classic Editor Addon" plugin. As it is an addon, you will also need to have the main Classic Editor plugin installed.
+
+I support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue here. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
 Thanks for your understanding and cooperation.
 
@@ -42,15 +44,11 @@ Classic Editor Addon by [Pieter Bos](https://so-wp.com/plugin/classic-editor-add
 
 ### What is this new block editor that ships with WordPress 5.0?
 
-The release of WordPress 5.0 comes with a replacement of the TinyMCE editor you have gotten used to. Some find it an improvement, others don't. More information can be found on the [WP 5.0 release post](https://wordpress.org/news/2018/12/bebo/).
+The release of WordPress 5.0 came with a replacement of the TinyMCE editor you had gotten used to for adding or editing content. Some find it an improvement, others don't. More information can be found on the [WP 5.0 release post](https://wordpress.org/news/2018/12/bebo/).
 
 ### Why this addon? Isn't the purpose of the Classic Editor plugin to disable the new block editor?
 
 When it was released initially, the "Classic Editor" plugin, by Andrew Ozz and other "WordPress Contributors", didn't completely disable the new block editor without changing settings. Since version 0.0.4 it does, but it still comes with Settings. The "Classic Editor Addon" is a second plugin that makes sure the Settings are gone, so they cannot be accidentally triggered and "bring down the skies".
-
-### How does this compare to other plugins that disable the new block editor?
-
-Great question! "Classic Editor" is the official plugin for removing the new block editor, and the install count is apparently being used as a metric to gauge success of the project. So, although other plugins exist to force-disable the new block editor, using them doesn't properly notify the WP Core team of the number of issues users are having, that is why "Classic Editor Addon" doesn't disable the new block editor itself, it just removes the Settings page of the "Classic Editor" plugin, making it easier to mass-install the "Classic Editor" plugin.
 
 ### The plugin doesn't do anything!
 
@@ -66,6 +64,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 3.1.0
+
+* October 27, 2022
+* integrate Classic Widgets filters
 
 ### 3.0.1
 
