@@ -17,7 +17,7 @@ The "Classic Editor Plus" plugin removes enqueued scripts/styles and brings back
 The free Classic Editor Plus plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without the fluff!
 
 <strong>What's New:</strong>
-No longer dependent on Classic Editor plugin; you may deactivate that one and remove it.
+No longer dependent on Classic Editor plugin; you may remove it.
 
 The reason I released the "Classic Editor Plus" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
