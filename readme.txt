@@ -37,7 +37,7 @@ Thanks for your understanding and cooperation.
 
 If you like the Classic Editor Plus plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). Thanks!
 
-Classic Editor Addon by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
+Classic Editor Plus by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
 
 == Frequently Asked Questions ==
 
