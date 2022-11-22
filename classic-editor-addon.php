@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name:			Classic Editor Addon
- * Description:			The "Classic Editor Addon" plugin removes enqueued scripts/styles and also brings back classic Widgets.
+ * Plugin Name:			Classic Editor Plus
+ * Description:			The "Classic Editor Plus" plugin removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				3.1.0
+ * Version:				4.0
 
  * Requires at least:	4.9
  * Tested up to:		6.1
@@ -25,48 +25,14 @@
 // don't load the plugin file directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// replaced wp dependency installer with simple dependency check/notice
-add_action( 'admin_init', 'cea_depends_on_ce' );
-function cea_depends_on_ce() {
-	if ( is_admin() && current_user_can( 'activate_plugins' ) &&  !is_plugin_active( 'classic-editor/classic-editor.php' ) ) {
-		add_action( 'admin_notices', 'cea_plugin_notice' );
+// deactivate Classic Editor plugin
+add_action( 'admin_init', 'cea_deactivate_ce' );
+function cea_deactivate_ce() {
+	if ( is_admin() && current_user_can( 'activate_plugins' ) &&  is_plugin_active( 'classic-editor/classic-editor.php' ) ) {
 
-		deactivate_plugins( plugin_basename( __FILE__ ) ); 
+		deactivate_plugins( 'classic-editor/classic-editor.php' );
 
-		if ( isset( $_GET['activate'] ) ) {
-			unset( $_GET['activate'] );
-		}
 	}
-}
-
-function cea_plugin_notice() {
-	
-	printf( '<div class="error"><p>' . __( 'Classic Editor Addon plugin requires the <a href="%s">Classic Editor plugin</a> to be installed and active.', 'classic-editor-addon' ) . '</p></div>', admin_url( 'plugin-install.php?s=classic%20editor&tab=search&type=term', 'https' ) );
-}
-
-add_action( 'plugins_loaded', 'classic_editor_addon_post_init', 20, 0 );
-
-function classic_editor_addon_post_init() {
-
-	if ( class_exists( 'Classic_Editor' ) ) {
-		/**
-		 * Remove Settings link to the settings from the Plugins screen.
-		 */
-		remove_filter( 'plugin_action_links', array( 'Classic_Editor', 'add_settings_link' ) );
-		remove_action( 'admin_init', array( 'Classic_Editor', 'register_settings' ) );
-		
-		/**
-		 * Bring back Classic Widgets
-		 *
-		 * @since 3.1.0
-		 * @src: https://plugins.svn.wordpress.org/classic-widgets/tags/0.3/classic-widgets.php
-		 */
-		// Disable the block editor from managing widgets in the Gutenberg plugin.
-		add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
-		// Disable the block editor from managing widgets.
-		add_filter( 'use_widgets_block_editor', '__return_false' );
-	}
-
 }
 
 add_action( 'wp_enqueue_scripts', 'classic_editor_addon_remove_block_styles', 100 );
@@ -78,6 +44,10 @@ function classic_editor_addon_remove_block_styles() {
 
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_deregister_style( 'wp-block-library-theme' );
+	
+	// Remove inline global CSS on the front end.
+	wp_dequeue_style( 'global-styles' );
+	wp_deregister_style( 'global-styles' );
 
 	// @2.5.0 add condition that checks for WooCommerce and removes call to block styles
 	if ( class_exists( 'woocommerce' ) ) {
@@ -86,3 +56,18 @@ function classic_editor_addon_remove_block_styles() {
 	}
 
 }
+
+// Disable Gutenberg on the back end.
+add_filter( 'use_block_editor_for_post', '__return_false' );
+
+/**
+ * Bring back Classic Widgets
+ *
+ * @since 3.1.0
+ * @src: https://plugins.svn.wordpress.org/classic-widgets/tags/0.3/classic-widgets.php
+ */
+// Disable the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+// Disable the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
+

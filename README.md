@@ -2,57 +2,57 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on October 27, 2022
+###### Last updated on November 22, 2022
 ###### Development version
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 6.1
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
-The "Classic Editor Addon" plugin removes enqueued scripts/styles and also brings back classic Widgets.
+The "Classic Editor Plus" plugin removes enqueued scripts/styles and brings back classic Widgets.
 
 ## Description
 
 > GDPR-compliant: does not collect any user data
 
-The free Classic Editor Addon plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to!
+The free Classic Editor Plus plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without the fluff!
 
 **What's New:**<br>
-Brings back Classic Widgets
+No longer dependent on Classic Editor plugin; you may deactivate that one and remove it.
 
-The reason I released the "Classic Editor Addon" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
+The reason I released the "Classic Editor Plus" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
 
 Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default setting to actually using the Classic Editor. It still contains a Settings page though and if the purpose of people is to get the Classic Editor instead of using the new block editor, then there is no need for such a Settings page.
 
 Also, looking at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as the new block editor adds a lot of undesirable html comments, tags and what not to the content.
 
-Sites running WooCommerce get another style added to the <code><head></code> section of the site. With the Classic Editor Addon installed that call is obviously redundant. With version 2.5.0 I introduced a condition that checks for WooCommerce and if active it removes that call. Win!
+Sites running WooCommerce get another style added to the <code><head></code> section of the site. With Classic Editor Plus installed that call is obviously redundant. With version 2.5.0 I introduced a condition that checks for WooCommerce and if active it removes that call. Win!
 
 And with version 3.1.0 Classic Widgets are also back. 
 
-Therefore I highly recommend installing this "Classic Editor Addon" plugin. As it is an addon, you will also need to have the main Classic Editor plugin installed.
+Therefore I highly recommend installing this "Classic Editor Plus" plugin. 
 
 I support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue here. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
 Thanks for your understanding and cooperation.
 
-If you like the Classic Editor Addon plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). Thanks!
+If you like the Classic Editor Plus plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). Thanks!
 
-Classic Editor Addon by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
+Classic Editor Plus by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
 
 ## Frequently Asked Questions
 
-### What is this new block editor that ships with WordPress 5.0?
+### What is the WP block editor?
 
 The release of WordPress 5.0 came with a replacement of the TinyMCE editor you had gotten used to for adding or editing content. Some find it an improvement, others don't. More information can be found on the [WP 5.0 release post](https://wordpress.org/news/2018/12/bebo/).
 
 ### Why this addon? Isn't the purpose of the Classic Editor plugin to disable the new block editor?
 
-When it was released initially, the "Classic Editor" plugin, by Andrew Ozz and other "WordPress Contributors", didn't completely disable the new block editor without changing settings. Since version 0.0.4 it does, but it still comes with Settings. The "Classic Editor Addon" is a second plugin that makes sure the Settings are gone, so they cannot be accidentally triggered and "bring down the skies".
+When it was released initially, the "Classic Editor" plugin, by Andrew Ozz and other "WordPress Contributors", didn't completely disable the new block editor without changing settings. Since version 0.0.4 it does, but it still comes with Settings. The "Classic Editor Plus" simply removes the block editor and all its styling from both frontend and backend.
 
-### The plugin doesn't do anything!
+### Do I still need the Classic Editor plugin on my site?
 
-Has the site been updated to WordPress 5.0 and do you have the Classic Editor plugin installed? Those two are requirements for this addon plugin to do anything. If you have and the plugin still doesn't do anything, then please open a [support ticket](https://github.com/senlin/classic-editor-addon/issues).
+Version 4.0 of the Classic Editor Plus plugin has been a complete rewrite (and simplification) and it is no longer depending on the Classic Editor plugin. When the latter is active, it will be deactivated and then you can safely remove it.
 
 ### I have an issue with this plugin, where can I get support?
 
@@ -64,6 +64,12 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.0
+
+* November 22, 2022
+* complete rewrite where dependency on Classic Editor plugin is removed
+* rename plugin
 
 ### 3.1.0
 
