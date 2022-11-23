@@ -1,43 +1,39 @@
-=== Classic Editor Plus ===
+=== Classic Editor + ===
 Contributors: senlin, gschoppe
-Tags: gutenberg, block editor, classic editor, addon, wordpress 5.0, woocommerce, classic widgets
+Tags: gutenberg, block editor, classic editor, wordpress 5.0, woocommerce, classic widgets
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-The "Classic Editor Plus" plugin removes enqueued scripts/styles and brings back classic Widgets.
+The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
 == Description ==
 
 > GDPR-compliant: does not collect any user data
 
-The free Classic Editor Plus plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without redundant styling being added to the frontend of your site!
+The free "Classic Editor +" plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without redundant styling being added to the frontend of your site!
 
 <strong>What's New:</strong>
 No longer dependent on Classic Editor plugin; you may remove it.
 
-The reason I released the "Classic Editor Plus" plugin is because in the beginning the "Classic Editor" plugin did not what it said on the label.
+This plugin simply disables the WP Block Editor, removes any and all styling from both front- and backend and disables the block editor for widgets too.
 
-Since version 0.0.4 of the "Classic Editor" plugin, it finally set the default setting to actually using the Classic Editor. It still contains a Settings page though and if the purpose of people is to get the Classic Editor instead of using the new block editor, then there is no need for such a Settings page.
+And if WooCommerce has been installed on the site, "Classic Editor +" removes the block styles of that plugin too.
 
-Also, looking at developers protecting the sites of their clients with the Classic Editor, they certainly don't want their clients to accidentally turn off the Classic Editor as the new block editor adds a lot of undesirable html comments, tags and what not to the content.
+There are no Settings, it simply does what it says on the label.
 
-Sites running WooCommerce get another style added to the <code><head></code> section of the site. With Classic Editor Plus installed that call is obviously redundant. With version 2.5.0 I introduced a condition that checks for WooCommerce and if active it removes that call. Win!
-
-With version 3.1.0 Classic Widgets are back and version 4.0 has seen a complete rewrite of the plugin where the dependency on the Classic Editor plugin has been completely removed.
-
-Therefore I highly recommend installing this "Classic Editor Plus" plugin. 
+Therefore I highly recommend installing this "Classic Editor +" plugin. 
 
 I support this plugin exclusively through [Github](https://github.com/senlin/classic-editor-addon/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue here. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
 Thanks for your understanding and cooperation.
 
-If you like the Classic Editor Plus plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). Thanks!
+If you like the "Classic Editor +" plugin, please consider leaving a [review](https://wordpress.org/support/view/plugin-reviews/classic-editor-addon?rate=5#postform). Thanks!
 
-Classic Editor Plus by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
+"Classic Editor +" by [Pieter Bos](https://so-wp.com/plugin/classic-editor-addon) and [Greg Schoppe](https://gschoppe.com).
 
 == Frequently Asked Questions ==
 
@@ -48,17 +44,22 @@ The release of WordPress 5.0 came with a replacement of the TinyMCE editor you h
 = Why this plugin? Isn't the purpose of the Classic Editor plugin to disable the new block editor? =
 
 The Classic Editor plugin does not remove any of the frontend styling, even when one selects the option to disable the block editor. In terms of site optimisation that is not good practice.
-This "Classic Editor Plus" simply removes the block editor and all its styling from both frontend and backend and if your site uses WooCommerce, it also removes block styling related to that from the frontend.
+This "Classic Editor +" simply removes the block editor and all its styling from both frontend and backend and if your site uses WooCommerce, it also removes block styling related to that from the frontend.
 
 = Do I still need the Classic Editor plugin on my site?  =
 
-Version 4.0 of the Classic Editor Plus plugin has been a complete rewrite (and simplification) and it is no longer depending on the Classic Editor plugin. When the latter is active, it will be deactivated and then you can safely remove it.
+Version 4.0 of the "Classic Editor +" plugin has been a complete rewrite (and simplification) and it is no longer depending on the Classic Editor plugin. When the latter is active, it will be deactivated and then you can safely remove it.
 
 = I have an issue with this plugin, where can I get support? =
 
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 4.0.2 =
+
+* November 23, 2022
+* rename to prevent conflicts with other plugin
 
 = 4.0.1 =
 
