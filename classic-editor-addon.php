@@ -4,7 +4,7 @@
  * Description:			The "Classic Editor Plus" plugin removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				4.0
+ * Version:				4.0.1
 
  * Requires at least:	4.9
  * Tested up to:		6.1
@@ -35,9 +35,9 @@ function cea_deactivate_ce() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'classic_editor_addon_remove_block_styles', 100 );
+add_action( 'wp_enqueue_scripts', 'cea_remove_block_styles', 100 );
 
-function classic_editor_addon_remove_block_styles() {
+function cea_remove_block_styles() {
 
 	wp_dequeue_style( 'wp-block-library' );
 	wp_deregister_style( 'wp-block-library' );
