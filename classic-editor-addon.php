@@ -35,7 +35,7 @@ function cea_deactivate_ce() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'cea_remove_block_styles', 100 );
+add_action( 'enqueue_block_assets', 'cea_remove_block_styles', 100 );
 
 function cea_remove_block_styles() {
 
@@ -48,13 +48,21 @@ function cea_remove_block_styles() {
 	// Remove inline global CSS on the front end.
 	wp_dequeue_style( 'global-styles' );
 	wp_deregister_style( 'global-styles' );
+    
+    // classic theme
+    wp_dequeue_style('classic-theme-styles');
+    
+    // svg
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+    remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
+    
 
 	// @2.5.0 add condition that checks for WooCommerce and removes call to block styles
 	if ( class_exists( 'woocommerce' ) ) {
-		wp_dequeue_style( 'wc-block-style' );
-		wp_deregister_style( 'wc-block-style' );
+		wp_dequeue_style( 'wc-blocks-style' );
+		wp_deregister_style( 'wc-blocks-style' );
 	}
-
+    
 }
 
 // Disable Gutenberg on the back end.
