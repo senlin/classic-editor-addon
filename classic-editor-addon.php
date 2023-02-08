@@ -4,7 +4,7 @@
  * Description:			The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				4.0.2
+ * Version:				4.1.0
 
  * Requires at least:	4.9
  * Tested up to:		6.1

@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on November 23, 2022
+###### Last updated on February 8, 2023
 ###### Development version
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 6.1
@@ -18,7 +18,8 @@ The "Classic Editor +" plugin disables the block editor, removes enqueued script
 The free "Classic Editor +" plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without redundant styling being added to the frontend of your site!
 
 **What's New:**<br>
-No longer dependent on Classic Editor plugin; you may remove it.
+Make things work again by replacing `wp_enqueue_scripts` with `enqueue_block_assets`
+
 
 This plugin simply disables the WP Block Editor, removes any and all styling from both front- and backend and disables the block editor for widgets too.
 
@@ -61,6 +62,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.1.0
+
+* February 8, 2023
+* Make things work again by replacing `wp_enqueue_scripts` with `enqueue_block_assets`; thanks for making me have another look @adekrijger - issues #14 & #15
 
 ### 4.0.2
 
