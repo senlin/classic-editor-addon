@@ -4,7 +4,7 @@
  * Description:			The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				4.1.0
+ * Version:				4.1.1
 
  * Requires at least:	4.9
  * Tested up to:		6.1
@@ -49,14 +49,6 @@ function cea_remove_block_styles() {
 	wp_dequeue_style( 'global-styles' );
 	wp_deregister_style( 'global-styles' );
     
-    // classic theme
-    wp_dequeue_style('classic-theme-styles');
-    
-    // svg
-    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
-    remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
-    
-
 	// @2.5.0 add condition that checks for WooCommerce and removes call to block styles
 	if ( class_exists( 'woocommerce' ) ) {
 		wp_dequeue_style( 'wc-blocks-style' );
@@ -64,6 +56,11 @@ function cea_remove_block_styles() {
 	}
     
 }
+
+// Remove global styles and enqueueing of classic-themes.min.css 
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
+remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
 
 // Disable Gutenberg on the back end.
 add_filter( 'use_block_editor_for_post', '__return_false' );
