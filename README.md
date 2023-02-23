@@ -39,9 +39,7 @@ If you like the "Classic Editor +" plugin, please consider leaving a [review](ht
 
 ### WPML Compatible
 
-In February 2023 the Classic Editor + plugin has received the [WPML Certification of Compatibility](https://wpml.org/plugin/classic-editor-2/).
-
-[![WPML Certification of Compatibility.](assets/wpml-ready-badge.png "WPML Certification of Compatibility")](https://wpml.org/plugin/so-pinyin-slugs/)
+Although the Classic Editor + plugin already was fully compatible with WPML, since February 2023 [it is official](https://wpml.org/plugin/classic-editor-2/) too.
 
 ## Frequently Asked Questions
 
