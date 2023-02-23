@@ -39,7 +39,7 @@ If you like the "Classic Editor +" plugin, please consider leaving a [review](ht
 
 ### WPML Compatible
 
-The Classic Editor + plugin has received the [WPML Certification of Compatibility](https://wpml.org/plugin/classic-editor-2/).
+In February 2023 the Classic Editor + plugin has received the [WPML Certification of Compatibility](https://wpml.org/plugin/classic-editor-2/).
 
 [![WPML Certification of Compatibility.](assets/wpml-ready-badge.png "WPML Certification of Compatibility")](https://wpml.org/plugin/so-pinyin-slugs/)
 
