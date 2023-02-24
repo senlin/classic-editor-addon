@@ -39,7 +39,7 @@ If you like the "Classic Editor +" plugin, please consider leaving a [review](ht
 
 ### WPML Compatible
 
-Although the Classic Editor + plugin already was fully compatible with WPML, since February 2023 [it is official](https://wpml.org/plugin/classic-editor-2/) too.
+Officially [WPML compatible](https://wpml.org/plugin/classic-editor-2/) since February 2023.
 
 ## Frequently Asked Questions
 
