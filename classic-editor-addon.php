@@ -4,10 +4,10 @@
  * Description:			The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				4.1.1
+ * Version:				4.2.0
 
  * Requires at least:	4.9
- * Tested up to:		6.1
+ * Tested up to:		6.2
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt
@@ -76,3 +76,15 @@ add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 // Disable the block editor from managing widgets.
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
+/**
+ * Disable block styling that WPML adds to every page load regardless of whether Blocks are being used.
+ * file that loads these styles: classes/block-editor/Loader.php (L25 & L77-84)
+ */
+add_action( 'wp_enqueue_scripts', 'cea_disable_wpml_block_styles', 11 );
+
+function cea_disable_wpml_block_styles() {
+    // Check if WPML is active and the WPML\BlockEditor\Loader class exists
+    if ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'sitepress-multilingual-cms/sitepress.php' ) && class_exists( 'WPML\BlockEditor\Loader' ) ) {
+        wp_deregister_style( WPML\BlockEditor\Loader::SCRIPT_NAME );
+    }
+}

@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on February 8, 2023
+###### Last updated on March 29, 2023
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 6.1
+###### tested up to WordPress 6.2
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
@@ -18,7 +18,7 @@ The "Classic Editor +" plugin disables the block editor, removes enqueued script
 The free "Classic Editor +" plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without redundant styling being added to the frontend of your site!
 
 **What's New:**<br>
-Remove global styles and enqueueing of classic-themes.min.css
+If WPML is active on your site: remove blocks stylesheet loaded regardless of whether site uses Block Editor
 
 
 This plugin simply disables the WP Block Editor, removes any and all styling from both front- and backend and disables the block editor for widgets too.
@@ -66,6 +66,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.2.0
+
+* March 29, 2023
+* Remove blocks stylesheet loaded by WPML (if WPML is active)
 
 ### 4.1.1
 
