@@ -7,7 +7,7 @@
  * Version:			4.3.0
 
  * Requires at least:		4.9
- * Tested up to:		6.2
+ * Tested up to:		6.4
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt
@@ -44,11 +44,11 @@ function cea_remove_block_styles() {
 
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_deregister_style( 'wp-block-library-theme' );
-	
+
 	// Remove inline global CSS on the front end.
 	wp_dequeue_style( 'global-styles' );
 	wp_deregister_style( 'global-styles' );
-    
+
 	// @2.5.0 add condition that checks for WooCommerce and removes call to block styles
 	if ( class_exists( 'woocommerce' ) ) {
 		wp_dequeue_style( 'wc-blocks-style' );
@@ -58,10 +58,10 @@ function cea_remove_block_styles() {
 		wp_deregister_style( 'wc-all-blocks-style' );
 		wp_deregister_style( 'wc-blocks-vendors-style' );
 	}
-    
+
 }
 
-// Remove global styles and enqueueing of classic-themes.min.css 
+// Remove global styles and enqueueing of classic-themes.min.css
 remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
 remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
 remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
