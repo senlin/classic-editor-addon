@@ -3,10 +3,10 @@
  * Plugin Name:			Classic Editor +
  * Description:			The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
- * Author:				<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:				4.2.0
+ * Author:			<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
+ * Version:			4.3.0
 
- * Requires at least:	4.9
+ * Requires at least:		4.9
  * Tested up to:		6.2
 
  * License:    			GPL-3.0+
@@ -14,7 +14,7 @@
 
  * Text Domain: 		classic-editor-addon
 
- * GitHub Plugin URI:	https://github.com/senlin/classic-editor-addon
+ * GitHub Plugin URI:		https://github.com/senlin/classic-editor-addon
  * GitHub Branch:		master
 
  * @package WordPress
@@ -52,7 +52,11 @@ function cea_remove_block_styles() {
 	// @2.5.0 add condition that checks for WooCommerce and removes call to block styles
 	if ( class_exists( 'woocommerce' ) ) {
 		wp_dequeue_style( 'wc-blocks-style' );
+		wp_dequeue_style( 'wc-all-blocks-style' );
+		wp_dequeue_style( 'wc-blocks-vendors-style' );
 		wp_deregister_style( 'wc-blocks-style' );
+		wp_deregister_style( 'wc-all-blocks-style' );
+		wp_deregister_style( 'wc-blocks-vendors-style' );
 	}
     
 }
