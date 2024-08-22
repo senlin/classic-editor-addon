@@ -92,3 +92,16 @@ function cea_disable_wpml_block_styles() {
         wp_deregister_style( WPML\BlockEditor\Loader::SCRIPT_NAME );
     }
 }
+
+/**
+ * Remove Patterns
+ *
+ * @since 4.4.0
+ * @src: https://www.wpexplorer.com/how-to-disable-wordpress-gutenberg-block-patterns/
+ */
+// Remove Core Patterns
+add_action( 'after_setup_theme', function() {
+     remove_theme_support( 'core-block-patterns' );
+} );
+// Remove Remote Patterns
+add_filter( 'should_load_remote_block_patterns', '__return_false' );
