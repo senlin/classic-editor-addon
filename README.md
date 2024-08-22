@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on November 10, 2023
+###### Last updated on August 22, 2024
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 6.4
+###### tested up to WordPress 6.6
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
@@ -18,12 +18,12 @@ The "Classic Editor +" plugin disables the block editor, removes enqueued script
 The free "Classic Editor +" plugin is targeted at everyone who does not want to use the WP Block Editor (Gutenberg), introduced in WordPress 5.0. Install it now on sites and the UX remains the same as you are used to without redundant styling being added to the frontend of your site!
 
 **What's New:**<br>
-Removes further blocks related CSS from Woocommerce (if active)
+Removes WP Patterns
 
 
 This plugin simply disables the WP Block Editor, removes any and all styling from both front- and backend and disables the block editor for widgets too.
 
-And if WooCommerce has been installed on the site, "Classic Editor +" removes the block styles of that plugin too.
+And if WooCommerce and/or WPML are installed on the site, "Classic Editor +" removes the block styles of those plugins too.
 
 There are no Settings, it simply does what it says on the label.
 
@@ -66,6 +66,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.4.0
+
+* August 22, 2024
+* Removes WP Patterns
 
 ### 4.3.0
 
