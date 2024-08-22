@@ -97,11 +97,62 @@ function cea_disable_wpml_block_styles() {
  * Remove Patterns
  *
  * @since 4.4.0
- * @src: https://www.wpexplorer.com/how-to-disable-wordpress-gutenberg-block-patterns/
  */
-// Remove Core Patterns
-add_action( 'after_setup_theme', function() {
-     remove_theme_support( 'core-block-patterns' );
-} );
-// Remove Remote Patterns
+if ( ! function_exists( 'cea_restrict_block_editor_patterns' ) ) {
+    /**
+     * Restricts block editor patterns in the editor by removing support for all patterns from:
+     *   - Dotcom and plugins like Jetpack
+     *   - Dotorg pattern directory except for theme patterns
+     */
+    function cea_restrict_block_editor_patterns( $dispatch_result, $request, $route ) {
+        if ( strpos( $route, '/wp/v2/block-patterns/patterns' ) === 0 ) {
+            $patterns = WP_Block_Patterns_Registry::get_instance()->get_all_registered();
+            if ( ! empty( $patterns ) ) {
+                // Remove theme support for all patterns from Dotcom, and plugins. See https://developer.wordpress.org/themes/features/block-patterns/#unregistering-block-patterns
+                foreach ( $patterns as $pattern ) {
+                    unregister_block_pattern( $pattern['name'] );
+                }
+                // Remove theme support for core patterns from the Dotorg pattern directory. See https://developer.wordpress.org/themes/features/block-patterns/#removing-core-patterns
+                remove_theme_support( 'core-block-patterns' );
+            }
+        }
+        return $dispatch_result;
+    }
+}
+
+
+// Remove and unregister patterns from core, Dotcom, and plugins. See https://github.com/Automattic/jetpack/blob/d032fbb807e9cd69891e4fcbc0904a05508a1c67/projects/packages/jetpack-mu-wpcom/src/features/block-patterns/block-patterns.php#L107
+add_filter( 'rest_dispatch_request', 'cea_restrict_block_editor_patterns', 12, 3 );
+
+
+// Disable the remote patterns coming from the Dotorg pattern directory. See https://developer.wordpress.org/themes/features/block-patterns/#disabling-remote-patterns
 add_filter( 'should_load_remote_block_patterns', '__return_false' );
+
+// Hide Patterns menu item from Appearance sidebar menu. See https://wordpress.stackexchange.com/a/426325/180899
+add_action( 'admin_init', 'cea_hide_wp_patterns_submenu', 100 );
+function cea_hide_wp_patterns_submenu() {
+    remove_submenu_page( 'themes.php', 'site-editor.php?path=/patterns' );
+}
+
+// Block access to Patterns page
+add_action( 'admin_init', 'cea_restrict_patterns_editor_access' );
+
+function cea_restrict_patterns_editor_access() {
+    // Get the current URL
+    $current_url = $_SERVER['REQUEST_URI'];
+
+    // List of patterns editor URLs to block
+    $blocked_urls = [
+        '/wp-admin/site-editor.php?postType=wp_block',
+        '/wp-admin/site-editor.php?path=/patterns',
+        '/wp-admin/site-editor.php'
+    ];
+
+    // Redirect if the current URL matches any of the blocked URLs
+    foreach ($blocked_urls as $url) {
+        if (strpos($current_url, $url) !== false) {
+            wp_redirect(admin_url());
+            exit;
+        }
+    }
+}
