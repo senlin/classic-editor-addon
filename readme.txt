@@ -1,10 +1,10 @@
 === Classic Editor + ===
 Contributors: senlin, gschoppe
-Tags: gutenberg, block editor, classic editor, wordpress 5.0, woocommerce, classic widgets
+Tags: classic editor, classic widgets, remove patterns, remove frontend styling, remove frontend scripts
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.6
-Stable tag: 4.4.0
+Tested up to: 6.8
+Stable tag: 4.4.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -55,6 +55,12 @@ Version 4.0 of the "Classic Editor +" plugin has been a complete rewrite (and si
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 4.4.1 =
+
+* date: April 27, 2025
+* edit maximum amount tags readme file
+* tested up to WP 6.8
 
 = 4.4.0 =
 

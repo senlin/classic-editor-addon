@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on August 22, 2024
+###### Last updated on April 27, 2025
 ###### Development version
 ###### requires at least WordPress 4.9
 ###### tested up to WordPress 6.6
@@ -66,6 +66,12 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.4.1
+
+* date: April 27, 2025
+* edit maximum amount tags readme file
+* tested up to WP 6.8
 
 ### 4.4.0
 
