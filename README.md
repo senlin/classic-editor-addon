@@ -5,7 +5,7 @@
 ###### Last updated on April 27, 2025
 ###### Development version
 ###### requires at least WordPress 4.9
-###### tested up to WordPress 6.6
+###### tested up to WordPress 6.9
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 

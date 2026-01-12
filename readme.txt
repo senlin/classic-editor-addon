@@ -3,7 +3,7 @@ Contributors: senlin, gschoppe
 Tags: classic editor, classic widgets, remove patterns, remove frontend styling, remove frontend scripts
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 4.4.1
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
