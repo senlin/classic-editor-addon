@@ -1,10 +1,10 @@
 === Classic Editor + ===
 Contributors: senlin, gschoppe
 Tags: classic editor, classic widgets, remove patterns, remove frontend styling, remove frontend scripts
-Requires at least: 4.9
+Requires at least: 5.5
 Requires PHP: 5.6
-Tested up to: 6.9
-Stable tag: 4.4.1
+Tested up to: 7.1
+Stable tag: 4.4.2
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -55,6 +55,14 @@ Version 4.0 of the "Classic Editor +" plugin has been a complete rewrite (and si
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 4.4.2 =
+
+* date: August 16, 2026
+* Fix: validate, unslash and sanitize `$_SERVER['REQUEST_URI']` in the Patterns page access check
+* Fix: use `wp_safe_redirect()` instead of `wp_redirect()`
+* Housekeeping: resolve WordPress Plugin Check (PCP) warnings in the main plugin file
+* tested up to WP 7.1
 
 = 4.4.1 =
 

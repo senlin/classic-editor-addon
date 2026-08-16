@@ -4,10 +4,10 @@
  * Description:			The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:			<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:			4.4.1
+ * Version:			4.4.2
 
- * Requires at least:		4.9
- * Tested up to:		6.9
+ * Requires at least:		5.5
+ * Tested up to:		7.1
 
  * License:    			GPL-3.0+
  * License URI:			http://www.gnu.org/licenses/gpl-3.0.txt
@@ -28,36 +28,36 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // deactivate Classic Editor plugin
 add_action( 'admin_init', 'cea_deactivate_ce' );
 function cea_deactivate_ce() {
-	if ( is_admin() && current_user_can( 'activate_plugins' ) &&  is_plugin_active( 'classic-editor/classic-editor.php' ) ) {
+    if ( is_admin() && current_user_can( 'activate_plugins' ) &&  is_plugin_active( 'classic-editor/classic-editor.php' ) ) {
 
-		deactivate_plugins( 'classic-editor/classic-editor.php' );
+        deactivate_plugins( 'classic-editor/classic-editor.php' );
 
-	}
+    }
 }
 
 add_action( 'enqueue_block_assets', 'cea_remove_block_styles', 100 );
 
 function cea_remove_block_styles() {
 
-	wp_dequeue_style( 'wp-block-library' );
-	wp_deregister_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library' );
+    wp_deregister_style( 'wp-block-library' );
 
-	wp_dequeue_style( 'wp-block-library-theme' );
-	wp_deregister_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_deregister_style( 'wp-block-library-theme' );
 
-	// Remove inline global CSS on the front end.
-	wp_dequeue_style( 'global-styles' );
-	wp_deregister_style( 'global-styles' );
+    // Remove inline global CSS on the front end.
+    wp_dequeue_style( 'global-styles' );
+    wp_deregister_style( 'global-styles' );
 
-	// @2.5.0 add condition that checks for WooCommerce and removes call to block styles
-	if ( class_exists( 'woocommerce' ) ) {
-		wp_dequeue_style( 'wc-blocks-style' );
-		wp_dequeue_style( 'wc-all-blocks-style' );
-		wp_dequeue_style( 'wc-blocks-vendors-style' );
-		wp_deregister_style( 'wc-blocks-style' );
-		wp_deregister_style( 'wc-all-blocks-style' );
-		wp_deregister_style( 'wc-blocks-vendors-style' );
-	}
+    // @2.5.0 add condition that checks for WooCommerce and removes call to block styles
+    if ( class_exists( 'woocommerce' ) ) {
+        wp_dequeue_style( 'wc-blocks-style' );
+        wp_dequeue_style( 'wc-all-blocks-style' );
+        wp_dequeue_style( 'wc-blocks-vendors-style' );
+        wp_deregister_style( 'wc-blocks-style' );
+        wp_deregister_style( 'wc-all-blocks-style' );
+        wp_deregister_style( 'wc-blocks-vendors-style' );
+    }
 
 }
 
@@ -138,20 +138,26 @@ function cea_hide_wp_patterns_submenu() {
 add_action( 'admin_init', 'cea_restrict_patterns_editor_access' );
 
 function cea_restrict_patterns_editor_access() {
-    // Get the current URL
-    $current_url = $_SERVER['REQUEST_URI'];
+    // Get the current URL.
+    $current_url = isset( $_SERVER['REQUEST_URI'] )
+        ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) )
+        : '';
 
-    // List of patterns editor URLs to block
-    $blocked_urls = [
+    if ( '' === $current_url ) {
+        return;
+    }
+
+    // List of patterns editor URLs to block.
+    $blocked_urls = array(
         '/wp-admin/site-editor.php?postType=wp_block',
         '/wp-admin/site-editor.php?path=/patterns',
-        '/wp-admin/site-editor.php'
-    ];
+        '/wp-admin/site-editor.php',
+    );
 
-    // Redirect if the current URL matches any of the blocked URLs
-    foreach ($blocked_urls as $url) {
-        if (strpos($current_url, $url) !== false) {
-            wp_redirect(admin_url());
+    // Redirect if the current URL matches any of the blocked URLs.
+    foreach ( $blocked_urls as $url ) {
+        if ( false !== strpos( $current_url, $url ) ) {
+            wp_safe_redirect( admin_url() );
             exit;
         }
     }

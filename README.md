@@ -2,10 +2,10 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on April 27, 2025
+###### Last updated on August 16, 2026
 ###### Development version
-###### requires at least WordPress 4.9
-###### tested up to WordPress 6.9
+###### requires at least WordPress 5.5
+###### tested up to WordPress 7.1
 ###### min. PHP version: 5.6
 ###### Authors: [Pieter Bos](https://github.com/senlin) &amp; [Greg Schoppe](https://github.com/gschoppe)
 
@@ -66,6 +66,14 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.4.2
+
+* date: August 16, 2026
+* Fix: validate, unslash and sanitize `$_SERVER['REQUEST_URI']` in the Patterns page access check
+* Fix: use `wp_safe_redirect()` instead of `wp_redirect()`
+* Housekeeping: resolve WordPress Plugin Check (PCP) warnings in the main plugin file
+* tested up to WP 7.1
 
 ### 4.4.1
 
