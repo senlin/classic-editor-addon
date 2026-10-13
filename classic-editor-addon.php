@@ -4,7 +4,7 @@
  * Description:			The "Classic Editor +" plugin disables the block editor, removes enqueued scripts/styles and brings back classic Widgets.
 
  * Author:			<a href="https://so-wp.com">Pieter Bos</a>, <a href="https://gschoppe.com">Greg Schoppe</a>
- * Version:			4.4.2
+ * Version:			4.4.3
 
  * Requires at least:		5.5
  * Tested up to:		7.1
@@ -161,4 +161,59 @@ function cea_restrict_patterns_editor_access() {
             exit;
         }
     }
+}
+
+// Strip script handles from block types so WP_Block::render() cannot enqueue them at render time.
+add_filter( 'block_type_metadata_settings', 'cea_strip_block_type_scripts', 10, 2 );
+function cea_strip_block_type_scripts( $settings, $metadata ) {
+    if ( ! is_admin() ) {
+        $settings['script_handles']         = array();
+        $settings['view_script_handles']    = array();
+        $settings['view_script_module_ids'] = array();
+        $settings['style_handles']          = array();
+        $settings['view_style_handles']     = array();
+    }
+    return $settings;
+}
+
+// Strip block assets from all registered block types on the front end.
+add_action( 'wp_loaded', 'cea_strip_registered_block_scripts', 100 );
+function cea_strip_registered_block_scripts() {
+    if ( is_admin() ) {
+        return;
+    }
+
+    $registry = WP_Block_Type_Registry::get_instance();
+    foreach ( $registry->get_all_registered() as $block_type ) {
+        $block_type->script_handles         = array();
+        $block_type->view_script_handles    = array();
+        $block_type->view_script_module_ids = array();
+        $block_type->style_handles          = array();
+        $block_type->view_style_handles     = array();
+    }
+}
+
+// Dequeue and deregister common core block scripts if enqueued directly.
+add_action( 'wp_enqueue_scripts', 'cea_remove_block_scripts', 100 );
+function cea_remove_block_scripts() {
+    wp_dequeue_script( 'wp-block-library' );
+    wp_deregister_script( 'wp-block-library' );
+
+    // If script module API is available, dequeue any queued modules
+    if ( function_exists( 'wp_script_modules' ) && method_exists( wp_script_modules(), 'get_queue' ) ) {
+        $queue = wp_script_modules()->get_queue();
+        if ( is_array( $queue ) && function_exists( 'wp_dequeue_script_module' ) ) {
+            foreach ( $queue as $module_id ) {
+                wp_dequeue_script_module( $module_id );
+            }
+        }
+    }
+}
+
+// Safety net for global styles, which can also be enqueued late.
+remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
+add_action( 'wp_footer', 'cea_dequeue_late_global_styles', 2 );
+function cea_dequeue_late_global_styles() {
+    wp_dequeue_style( 'global-styles' );
+    wp_deregister_style( 'global-styles' );
 }
