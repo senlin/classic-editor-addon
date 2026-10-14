@@ -4,7 +4,7 @@ Tags: classic editor, classic widgets, remove patterns, remove frontend styling,
 Requires at least: 5.5
 Requires PHP: 5.6
 Tested up to: 7.1
-Stable tag: 4.4.3
+Stable tag: 4.4.4
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -55,6 +55,13 @@ Version 4.0 of the "Classic Editor +" plugin has been a complete rewrite (and si
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
 
 == Changelog ==
+
+= 4.4.4 =
+
+* date: October 14, 2026
+* Fix: 4.4.3 broke sites by removing assets beyond core blocks. Removal now only applies to core blocks (core/*)
+* Fix: 4.4.3 dequeued every script module on the front end. Only core WordPress modules (@wordpress/*) are dequeued now
+* Fix: third-party block scripts, styles and script modules are no longer removed
 
 = 4.4.3 =
 

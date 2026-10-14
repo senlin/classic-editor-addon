@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on October 13, 2026
+###### Last updated on October 14, 2026
 ###### Development version
 ###### requires at least WordPress 5.5
 ###### tested up to WordPress 7.1
@@ -66,6 +66,13 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.4.4
+
+* date: October 14, 2026
+* Fix: 4.4.3 broke sites by removing assets beyond core blocks. Removal now only applies to core blocks (core/*)
+* Fix: 4.4.3 dequeued every script module on the front end. Only core WordPress modules (@wordpress/*) are dequeued now
+* Fix: third-party block scripts, styles and script modules are no longer removed
 
 ### 4.4.3
 
