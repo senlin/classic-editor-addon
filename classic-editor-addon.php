@@ -167,6 +167,9 @@ function cea_restrict_patterns_editor_access() {
 add_filter( 'block_type_metadata_settings', 'cea_strip_block_type_scripts', 10, 2 );
 function cea_strip_block_type_scripts( $settings, $metadata ) {
     if ( ! is_admin() ) {
+        if ( ! isset( $metadata['name'] ) || strpos( $metadata['name'], 'core/' ) !== 0 ) {
+            return $settings;
+        }
         $settings['script_handles']         = array();
         $settings['view_script_handles']    = array();
         $settings['view_script_module_ids'] = array();
@@ -185,6 +188,9 @@ function cea_strip_registered_block_scripts() {
 
     $registry = WP_Block_Type_Registry::get_instance();
     foreach ( $registry->get_all_registered() as $block_type ) {
+        if ( strpos( $block_type->name, 'core/' ) !== 0 ) {
+            continue;
+        }
         $block_type->script_handles         = array();
         $block_type->view_script_handles    = array();
         $block_type->view_script_module_ids = array();
@@ -204,7 +210,9 @@ function cea_remove_block_scripts() {
         $queue = wp_script_modules()->get_queue();
         if ( is_array( $queue ) && function_exists( 'wp_dequeue_script_module' ) ) {
             foreach ( $queue as $module_id ) {
-                wp_dequeue_script_module( $module_id );
+                if ( strpos( $module_id, '@wordpress/' ) === 0 ) {
+                    wp_dequeue_script_module( $module_id );
+                }
             }
         }
     }
