@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/classic-editor-addon.svg)](https://wordpress.org/plugins/classic-editor-addon) [![WP compatibility](https://plugintests.com/plugins/classic-editor-addon/wp-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest) [![PHP compatibility](https://plugintests.com/plugins/classic-editor-addon/php-badge.svg)](https://plugintests.com/plugins/classic-editor-addon/latest)
 
-###### Last updated on October 14, 2026
+###### Last updated on October 22, 2026
 ###### Development version
 ###### requires at least WordPress 5.5
 ###### tested up to WordPress 7.1
@@ -56,6 +56,19 @@ This "Classic Editor +" simply removes the block editor and all its styling from
 
 Version 4.0 of the "Classic Editor +" plugin has been a complete rewrite (and simplification) and it is no longer depending on the Classic Editor plugin. When the latter is active, it will be deactivated and then you can safely remove it.
 
+### Why does my content area (.entry-content) shift or look misaligned with my theme?
+
+Classic Editor + removes WordPress's global styles from the front end to keep the page lean. Some themes, [Blocksy for example](https://wordpress.org/support/topic/align-issue-with-4-4-4/), rely on those styles for the layout of the content area, which can make `.entry-content` shift to the left margin.
+
+To bring the global styles back, add the following to your child theme's functions.php or to a code snippets plugin:
+
+	/**
+	 * Restore core's global styles, which Classic Editor + removes by default.
+	 *
+	 * @return void
+	 */
+	add_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+
 ### I have an issue with this plugin, where can I get support?
 
 Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/issues)
@@ -66,6 +79,11 @@ Please open an issue on [Github](https://github.com/senlin/classic-editor-addon/
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Changelog
+
+### 4.4.5
+
+* date: October 22, 2026
+* Docs: added a FAQ entry explaining why `.entry-content` can shift with some themes (for example [Blocksy](https://wordpress.org/support/topic/align-issue-with-4-4-4/)) and how to restore WordPress's global styles with a one-line snippet in child theme's `functions.php` file or functionality plugin.
 
 ### 4.4.4
 
